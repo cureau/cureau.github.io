@@ -1,0 +1,111 @@
+
+#chops-section
+
+  .subheader
+    @include row
+    @include clearfix
+
+    h5
+      float: left
+      margin: 3px 0 0 12px
+      font-size: 2em
+
+    .subheader-rect
+      height: 45px
+      width: 20px
+      border: none
+      float: left
+
+  .subheader.tech .subheader-rect
+     background-color: $color1
+
+  .subheader.team .subheader-rect
+     background-color: $color2
+
+  .subheader.user .subheader-rect
+     background-color: $color3
+
+  .row
+    @include row
+    padding: 20px 0
+
+  .chops-row
+    @include row
+    @include outer-container
+    margin-top: 40px
+
+    .chops-group
+      @include span-columns(5)
+
+      ul
+        margin-top: 15px
+        list-style-position: inside
+        list-style-type: none
+
+        li
+          font-family: "Source Sans Pro" !important
+          font-weight: 200
+          font-size: 1.8em
+          margin: 20px 0
+
+          span
+            //border-bottom: 4px solid $color1
+
+          b
+            text-transform: uppercase
+            color: $color1
+
+        //li:before
+          //content: "+ "
+
+    .chops-details
+      @include span-columns(3)
+      @include shift(2)
+      padding-top: 25px
+
+  .chops-row:nth-of-type(odd) .chops-group
+     @include shift(7)
+
+
+
+  //.chops-group.tech
+    //.chops-box
+      //border-color: $the-blue
+
+      //h6
+        //background: $the-blue
+
+  //.chops-group.team
+    //.chops-box
+      //border-color: $the-red
+
+      //h6
+        //background: $the-red
+
+  //.chops-group.user
+    //.chops-box
+      //border-color: darkgreen
+
+      //h6
+        //background: darkgreen
+
+  //.chops-group
+    //max-width: 200px
+
+    //.chops-box
+      //background: white
+      //border: 7px solid #5665BE
+      //color: black
+      //margin: 0 22px 12px 0
+
+      //p
+        //padding: 5px
+
+      //h6
+        //background: #5665BE
+        //display: block
+        //color: white
+        //margin: 0
+        //text-align: center
+        //padding: 8px 0 4px
+        //text-transform: uppercase

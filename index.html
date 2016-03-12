@@ -3,15 +3,14 @@ layout: default
 title: Your New Jekyll Site
 ---
 
-{% include section.html %}
+<div class="home-wrap">
 
-<img src="img/example.jpg" alt="Alt">
+    {% include header.html %}
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+    {% include home-sections/section-clients.html %}
+    {% include home-sections/section-chops.html %}
+    {% include home-sections/section-timeline.html %}
+
+    {% include footer.html %}
+
 </div>

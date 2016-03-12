@@ -70,7 +70,7 @@ gulp.task('sass', function () {
  * Compile Jade
  */
 gulp.task('jade', function() {
-    return gulp.src('_jade/*.jade')
+    return gulp.src('_jade/**/*')
     .pipe(jade())
     .pipe(gulp.dest('_includes'));
 });
@@ -100,7 +100,7 @@ gulp.task('watch', function () {
     gulp.watch('js/**/*.js', ['js']).on("change", browserSync.reload);
     gulp.watch('css/**', ['sass']);
     gulp.watch(['*.html', '_layouts/*.html', '_posts/*', '_includes/*'], ['jekyll-rebuild']);
-    gulp.watch('_jade/*.jade', ['jade']);
+    gulp.watch('_jade/**/*', ['jade']);
 });
 
 

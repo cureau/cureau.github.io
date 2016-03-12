@@ -1,0 +1,35 @@
+
+h1, h2, h3, h4, h5
+  font-family: "Montserrat"
+
+p, h6, ul, input, button
+  //font-family: "Arvo"
+  font-family: "Courier Prime"
+
+body
+  //background-color: #1b130c
+  //background-color: #0d0905
+  //background-color: #150c08
+  background-color: $close-to-black
+
+  .section-header
+    font-size: 5em
+
+.container
+  @include outer-container
+
+.home-wrap
+  //display: flex
+  //flex-direction: columns
+
+  //section:odd
+
+  section
+    padding: 40px 0
+
+  section:nth-of-type(even)
+    background-color: $close-to-white
+    color: $close-to-black
+
+  section:nth-of-type(odd)
+    color: $close-to-white

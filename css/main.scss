@@ -1,3 +1,30 @@
-@import "bourbon";
-@import "tools/base/base";
+/*$visual-grid: true;*/
+/*$visual-grid-color: #faa;*/
+/*$visual-grid-index: front;*/
+
 @import "tools/normalize";
+
+@import "tools/bourbon/bourbon";
+@import "tools/base/base";
+@import "tools/neat/neat";
+
+
+/* Personal vars in addition to vars in tools/base */
+@import "utils/vars";
+@import "utils/fonts";
+
+
+@import "global/home";
+
+
+
+@import "sections/header";
+@import "sections/footer";
+
+/* HOME SECTION STYLING */
+
+@import "sections/home-sections/section-clients";
+@import "sections/home-sections/section-chops";
+@import "sections/home-sections/section-timeline";
+
+
