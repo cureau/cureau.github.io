@@ -4,11 +4,11 @@
   .subheader
     @include row
     @include clearfix
+    font-size: $font-size-feature
 
     h5
       float: left
       margin: 3px 0 0 12px
-      font-size: 2em
 
     .subheader-rect
       height: 45px
@@ -16,47 +16,72 @@
       border: none
       float: left
 
-  .subheader.tech .subheader-rect
-     background-color: $color1
+  .chops-row.tech 
+    .subheader-rect
+      background-color: $color3
 
-  .subheader.team .subheader-rect
-     background-color: $color2
+    ul li
+        b
+          color: $color3
+        &:hover
+          .underline-wrapper
+            border-bottom: 4px solid $color3
 
-  .subheader.user .subheader-rect
-     background-color: $color3
+  .chops-row.team
+    .subheader-rect
+      background-color: $color2
 
-  .row
-    @include row
-    padding: 20px 0
+    ul li
+        b
+          color: $color2
+        &:hover
+          .underline-wrapper
+            border-bottom: 4px solid $color2
+
+  .chops-row.market
+    .subheader-rect
+      background-color: $color1
+
+    ul li
+        b
+          color: $color1
+        &:hover
+          .underline-wrapper
+            border-bottom: 4px solid $color1
 
   .chops-row
     @include row
     @include outer-container
     margin-top: 40px
+    height: 100vh
+    display: flex
+    flex-direction: column
+    justify-content: center
+    position: sticky
 
     .chops-group
       @include span-columns(5)
 
       ul
+        font-size: $font-size-feature
         margin-top: 15px
         list-style-position: inside
         list-style-type: none
 
         li
-          font-family: "Source Sans Pro" !important
           font-weight: 200
-          font-size: 1.8em
           margin: 20px 0
+          cursor: pointer
 
           span
             //border-bottom: 4px solid $color1
 
           b
             text-transform: uppercase
-            color: $color1
 
         //li:before
           //content: "+ "
+
 
     .chops-details
       @include span-columns(3)

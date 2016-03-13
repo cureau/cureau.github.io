@@ -1,10 +1,12 @@
 
-h1, h2, h3, h4, h5
-  font-family: "Montserrat"
+h1, h2, h3
+  font: $font-title
+
+h4, h5
+  font-family: $font-subtitle
 
 p, h6, ul, input, button
-  //font-family: "Arvo"
-  font-family: "Courier Prime"
+  font-family: $font-feature
 
 body
   //background-color: #1b130c
@@ -13,10 +15,16 @@ body
   background-color: $close-to-black
 
   .section-header
-    font-size: 5em
+    font-family: $font-title
+    font-size: $font-size-title
 
 .container
   @include outer-container
+  padding: 70px 0 100px
+
+//.row
+  //@include row
+  //padding: 20px 0
 
 .home-wrap
   //display: flex
