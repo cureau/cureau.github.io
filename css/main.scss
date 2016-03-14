@@ -1,3 +1,5 @@
+// Neat Settings
+
 /*$visual-grid: true;*/
 /*$visual-grid-color: #faa;*/
 /*$visual-grid-index: front;*/
@@ -10,18 +12,19 @@
 
 
 /* Personal vars in addition to vars in tools/base */
+
 @import "utils/vars";
 @import "utils/fonts";
-
+@import "utils/gfonts";
 
 @import "global/home";
-
 
 
 @import "sections/header";
 @import "sections/footer";
 
 /* HOME SECTION STYLING */
+
 
 @import "sections/home-sections/section-clients";
 @import "sections/home-sections/section-chops";

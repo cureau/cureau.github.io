@@ -18,13 +18,17 @@ body
     font-family: $font-title
     font-size: $font-size-title
 
+
+.hide
+  display: none
+
 .container
   @include outer-container
   padding: 70px 0 100px
 
-//.row
-  //@include row
-  //padding: 20px 0
+.row
+  @include row
+  padding: 20px 0
 
 .home-wrap
   //display: flex

@@ -23,8 +23,9 @@
     ul li
         b
           color: $color3
+
         &:hover
-          .underline-wrapper
+          b
             border-bottom: 4px solid $color3
 
   .chops-row.team
@@ -35,7 +36,7 @@
         b
           color: $color2
         &:hover
-          .underline-wrapper
+          b
             border-bottom: 4px solid $color2
 
   .chops-row.market
@@ -46,7 +47,7 @@
         b
           color: $color1
         &:hover
-          .underline-wrapper
+          b
             border-bottom: 4px solid $color1
 
   .chops-row
@@ -84,9 +85,15 @@
 
 
     .chops-details
-      @include span-columns(3)
+      @include span-columns(4)
       @include shift(2)
       padding-top: 25px
+      //text-align: justify
+      @include columns(2)
+
+      h6
+        color: $color1
+        font-weight: bold
 
   .chops-row:nth-of-type(odd) .chops-group
      @include shift(7)

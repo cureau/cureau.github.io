@@ -9,7 +9,8 @@ var gulp        = require('gulp'),
     rename      = require('gulp-rename'),
     cp          = require('child_process'),
     jade        = require('gulp-jade'),
-    bourbon     = require('bourbon').includePaths;
+    bourbon     = require('bourbon').includePaths,
+    googleWebFonts = require('gulp-google-webfonts');
 
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
@@ -47,6 +48,17 @@ gulp.task('browser-sync', ['sass', 'js', 'jekyll-build'], function() {
     });
 });
 
+
+gulp.task('gfonts', function () {
+    return gulp.src('./fonts.list')
+        .pipe(googleWebFonts({
+            fontsDir: '../../fonts/GoogleFonts',
+            cssDir: '',
+            cssFilename: '_gfonts.scss'
+        }))
+        .pipe(gulp.dest('css/utils/'))
+        .pipe(gulp.dest('_site/css/utils/'));
+});
 
 /**
  * Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
@@ -101,6 +113,7 @@ gulp.task('watch', function () {
     gulp.watch('css/**', ['sass']);
     gulp.watch(['*.html', '_layouts/*.html', '_posts/*', '_includes/*'], ['jekyll-rebuild']);
     gulp.watch('_jade/**/*', ['jade']);
+    gulp.watch('fonts.list', ['gfonts']).on("change", browserSync.reload);
 });
 
 

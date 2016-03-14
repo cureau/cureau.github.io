@@ -1,17 +1,27 @@
 
 
+
 #timeline-section
+
   .row
+    padding: 70px 0
+
+  .history-text
     @include span-columns(5)
-
-  .row:nth-of-type(even)
-    @include shift(7)
-
-  .history-point
-    font-size: $font-size-feature
-    //@include span-columns(5)
+    font-size: $font-size-feature-sm
 
     h5
+      font-weight: normal
 
-    p
+  .history-pics
+    @include shift(2)
+    @include span-columns(4)
+    display: flex
+    justify-content: center
+
+    img
+      border-radius: 50%
+      height: 250px
+      width: 250px
+
 
