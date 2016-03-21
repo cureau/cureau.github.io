@@ -1,0 +1,21 @@
+mixin skill(dotsCt, item, extra)
+    - var dots = ''
+    - if (dotsCt === 0) dots += '◖'
+    - for (var x = 0; x < dotsCt; x++) dots += '●'
+        li <span class="skill-dots">#{dots} </span> #{item}
+    - if (typeof extra !== 'undefined')
+        i #{extra}
+
+mixin monkey(ct)
+    - var ret = ''
+    - for (var x = 0; x < ct; x++) ret += '&#x1F435;'
+    //- for (var x = 0; x < ct; x++) ret += '&#x1F482;'
+    //- for (var y = 0; y < spaces; y++) ret += '&nbsp;'
+    - ret += '&nbsp'
+    span(class="unicon") !{ret}
+
+mixin dancers(ct)
+    - var ret = ''
+    - for (var x = 0; x < ct; x++) ret += '&#x1F46F;'
+    - ret += '&nbsp'
+    span(class="unicon") !{ret}

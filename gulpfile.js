@@ -82,7 +82,7 @@ gulp.task('sass', function () {
  * Compile Jade
  */
 gulp.task('jade', function() {
-    return gulp.src('_jade/**/*')
+    return gulp.src('_jade/**/*.jade')
     .pipe(jade())
     .pipe(gulp.dest('_includes'));
 });

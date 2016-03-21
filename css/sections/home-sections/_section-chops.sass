@@ -1,143 +1,154 @@
 
+$chops-subheader-offset: 80px
+
 #chops-section
 
-  .subheader
-    @include row
-    @include clearfix
-    font-size: $font-size-feature
+  .double-col
+    @include columns(2)
 
-    h5
-      float: left
-      margin: 3px 0 0 12px
-
-    .subheader-rect
-      height: 45px
-      width: 20px
-      border: none
-      float: left
-
-  .chops-row.tech 
-    .subheader-rect
-      background-color: $color3
-
-    ul li
-        b
-          color: $color3
-
-        &:hover
-          b
-            border-bottom: 4px solid $color3
-
-  .chops-row.team
-    .subheader-rect
-      background-color: $color2
-
-    ul li
-        b
-          color: $color2
-        &:hover
-          b
-            border-bottom: 4px solid $color2
-
+  //--------
+  //COLORS//
+  //--------
   .chops-row.market
     .subheader-rect
       background-color: $color1
-
-    ul li
-        b
-          color: $color1
-        &:hover
-          b
-            border-bottom: 4px solid $color1
-
-  .chops-row
-    @include row
-    @include outer-container
-    margin-top: 40px
-    height: 100vh
-    display: flex
-    flex-direction: column
-    justify-content: center
-    position: sticky
-
-    .chops-group
-      @include span-columns(5)
-
-      ul
-        font-size: $font-size-feature
-        margin-top: 15px
-        list-style-position: inside
-        list-style-type: none
-
-        li
-          font-weight: 200
-          margin: 20px 0
-          cursor: pointer
-
-          span
-            //border-bottom: 4px solid $color1
-
-          b
-            text-transform: uppercase
-
-        //li:before
-          //content: "+ "
-
-
-    .chops-details
-      @include span-columns(4)
-      @include shift(2)
-      padding-top: 25px
-      //text-align: justify
-      @include columns(2)
-
+    ul li b
+      color: $color1
+    ul li:hover b
+      border-bottom: 4px solid $color1
+    .chops-details-grp
+      ul .skill-dots
+        color: $color1
+      ul li.show-bullets::first-letter
+        color: $color1
       h6
         color: $color1
         font-weight: bold
+  .chops-row.team
+    .subheader-rect
+      background-color: $color2
+    ul li b
+      color: $color2
+    ul li:hover b
+      border-bottom: 4px solid $color2
+    .chops-details-grp
+      ul .skill-dots
+        color: $color2
+      ul li.show-bullets::first-letter
+        color: $color2
+      h6
+        color: $color2
+        font-weight: bold
+  .chops-row.tech
+    .subheader-rect
+      background-color: $color3
+    ul li b
+      color: $color3
+    ul li:hover b
+      border-bottom: 4px solid $color3
+    .chops-details-grp
+      ul .skill-dots
+        color: $color3
+      ul li.show-bullets::first-letter
+        color: $color3
+      h6
+        color: $color3
+        font-weight: bold
 
-  .chops-row:nth-of-type(odd) .chops-group
-     @include shift(7)
+  //-----//
+
+
+  .chops-row:nth-of-type(even) .chops-tldr
+    float: right
+  .chops-row:nth-of-type(even) .chops-details
+    @include shift(1)
+
+  .chops-row
+    padding-top: 80px
+    height: 100vh
+    @include row
+    @include outer-container
+
+    .chops-tldr
+      border: 1px solid red
+      height: 100%
+      @include span-columns(5)
+
+      .subheader
+        @include row
+        font-size: $font-size-feature
+        height: $chops-subheader-offset
+        float:left
+
+        h5
+          float: left
+          margin: 3px 0 0 12px
+
+        .subheader-rect
+          height: 45px
+          width: 20px
+          border: none
+          float: left
+      ul
+        font-size: $font-size-feature
+        font-weight: 200
+        cursor: pointer
+
+        li
+          margin-bottom: 12px
+
+        b
+          text-transform: uppercase
+
+    .chops-details
+      border: 1px solid red
+      @include span-columns(4)
+      @include shift(2)
+      padding-top: $chops-subheader-offset
+
+      ul
+        margin-bottom: 12px
+
+      ul.show-bullets
+        li:before
+          content: "+ "
+        //font-size: $font-size-feature
+        //margin-top: 15px
+        //list-style-position: inside
+        //list-style-type: none
+
+        //li
+          //font-weight: 200
+          //margin: 20px 0
+          //cursor: pointer
+
+          //span
+            ////border-bottom: 4px solid $color1
+
+          //b
+            //text-transform: uppercase
 
 
 
-  //.chops-group.tech
-    //.chops-box
-      //border-color: $the-blue
+    //.chops-details
+      //border: 1px solid red
+      //@include span-columns(4)
+      //@include shift(2)
+      //padding-top: 25px
 
       //h6
-        //background: $the-blue
+        //color: $color1
+        //font-weight: bold
 
-  //.chops-group.team
-    //.chops-box
-      //border-color: $the-red
+      //.chops-details-grp
+        //ul
+          //.skill-dots
+            //color: $color1
 
-      //h6
-        //background: $the-red
+        //li:before
+          ////content: ">>"
+          ////color: $color1
 
-  //.chops-group.user
-    //.chops-box
-      //border-color: darkgreen
+  ////.chops-row:nth-of-type(even) .chops-group-tldr
+     ////@include shift(7)
 
-      //h6
-        //background: darkgreen
-
-  //.chops-group
-    //max-width: 200px
-
-    //.chops-box
-      //background: white
-      //border: 7px solid #5665BE
-      //color: black
-      //margin: 0 22px 12px 0
-
-      //p
-        //padding: 5px
-
-      //h6
-        //background: #5665BE
-        //display: block
-        //color: white
-        //margin: 0
-        //text-align: center
-        //padding: 8px 0 4px
-        //text-transform: uppercase

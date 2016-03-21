@@ -5,23 +5,53 @@
 
   .row
     padding: 70px 0
+    height: 500px
+    border: 1px solid red
+
+  .row:nth-of-type(odd)
+    .history-pics
+      float: right
+  .row:nth-of-type(even)
+    .history-pics
+      img
+        //float: right
+        //margin-right: ($column + $gutter)
 
   .history-text
-    @include span-columns(5)
+    @include span-columns(6)
     font-size: $font-size-feature-sm
+    padding-right: $gutter
+
+    h4
+      text-transform: uppercase
 
     h5
       font-weight: normal
 
   .history-pics
-    @include shift(2)
-    @include span-columns(4)
-    display: flex
-    justify-content: center
+    @include span-columns(6)
+    //@include span-columns(7)
 
-    img
+    .pic
+      repeat: no-repeat
+      position: center
       border-radius: 50%
       height: 250px
       width: 250px
+      margin-left: ($column + $gutter)
+
+    #bw-pic
+      background: url('/img/timeline/bw-square.jpg')
+
+    #lza-pic
+      background: url('/img/timeline/lza-square.jpg')
+
+    #sf-pic
+      background: url('/img/timeline/sf-square.jpg')
+
+
+    img
+      display: block
+      //margin: 0px auto
 
 

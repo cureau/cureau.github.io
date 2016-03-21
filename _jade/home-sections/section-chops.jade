@@ -1,96 +1,30 @@
 
+//include ../mixins/skill.jade
+
+
+//-
+    mixin plink(link, text)
+        a(href=link)= "y"
+        span #{text + ", "}
+
+//-
+    mixin products(products)
+        - each product in products
+            span
+    a(href=product.link)
+        img(src='/img/ext-link-icon.svg' alt='link')
+        product.name
+
+
 
 section#chops-section
+
   div.container
-      h4.section-header measured results
+    h4.section-header measured results
 
     div.chops-row.market
-
-      div.row
-
-        div.subheader
-          div.subheader-rect
-          h5 MARKET
-
-      div.row
-
-        div.chops-group
-
-          ul
-            li: span.underline-wrapper <b>UX Design:</b> Led or co-led UX and product design for 6 products. <b>[&hellip;]</b>
-            li: span.underline-wrapper <b>Growth:</b> Grew company from <span>$3k in savings to $2M</span> outside valuation (650x). <b>[&hellip;]</b>
-            li: span.underline-wrapper <b>Sales:</b> CEO’d a company to <span>~$118k in monthly revenue</span>, incl. sales to <span>Whole Foods and Costco</span>. <b>[&hellip;]</b>
-
-            //
-                li <b>Insights</b> Worked with customers across <span>5 verticals</span>: wholesale, charity, adtech, mobile, health. (also in diff countries, languages spoken.)
-                li <b>Unit Economics</b> Cut CAC by 5x; recruited ~10k users to two diff projects.
-
-        div.chops-details
-
-            div.chops-details-grp
-
-              ul
-                li Customer Interviews*i
-                li User Stories & Paths
-                li Design Sprints
-                li Wireframing & Reqs
-                li -
-                li Mockups (Sketch)
-                li Rapid Prototyping (Sass/Jade)
-                li -
-                li Agile & Scrum
-                li Typography & Colors
-
-
-              p 300+ customer interviews across 5 verticals: wholesale, charity, adtech, mobile, and health.
-              // li Conversion Optimization
-
-              ul
-                li video SDK & service
-                li plugins & gamification layer*
-                li wholesale & retail coffee brand*
-                li advertising platform*
-                li two marketing videos*
-                li tontine
-                li applicant tracking system (ATS)
-                li therapist marketplace*
-
-            div.chops-details-grp.hide
-
-              ul
-                li Conversion Optimization
-                li Analytics
-                li SQL & NoSQL Queries
-
+        include ./chops-groups/chops-market.jade
     div.chops-row.team
-
-      div.chops-group
-
-        div.subheader
-          div.subheader-rect
-          h5 TEAM
-
-        ul
-          // li <b>Friendliness</b> Worked with 4 colleagues on least two ventures. Mentored 2 to VIP roles.
-          // li <b>Logistics</b> Setup warehouse. Roasted and shipped <span>17,000lbs of coffee per month</span>. Worked with 6 intl communities helping <span>1000s of families</span>.
-          li: span.underline-wrapper <b>Ownership:</b> 9 years in the wild (3 in SF). Bringing results, adventures, and smiles in good & bad times.
-          li: span.underline-wrapper <b>Leadership:</b> Led 2 teams of 6 and 12 direct reports. 20 hires.
-          li: span.underline-wrapper <b>Camaraderie:</b> Mentored 2 to VIP roles. Worked with 4 across 2+ ventures.
-          //
-              li <b>Communication</b> 6 speaking engagements, 20+ press interviews, web copy, 8 blog posts, and 2 marketing vids.
-
+        include ./chops-groups/chops-team.jade
     div.chops-row.tech
-
-      div.chops-group
-
-        div.subheader
-          div.subheader-rect
-          h5 TECH
-
-        ul
-          // li <b>DevOps:</b><br />Built and managed 2 large (20+ instance) scalable AWS production environments.
-          li: span.underline-wrapper <b>Full Stack:</b> Dev’d 8 full stack projs incl. an ad platform & server optimizing delivery of <span>~10 million ads/month</span>.
-          li: span.underline-wrapper <b>Mobile:</b> Built APIs and back end support for <span>5 brand name mobile apps</span>, incl. Sea Life and Jeff Gordon.
-          // li <b>Data Engineering:</b> Scraped, scrubbed, flagged, tagged, and gift-wrapped big data from SQL & NoSQL in real-time.
-          li: span.underline-wrapper <b>Outside Box:</b> Co-invented a <span>patented video protection</span> & delivery mechanism for iPhone.
-
+        include ./chops-groups/chops-tech.jade

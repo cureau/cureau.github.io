@@ -1,0 +1,103 @@
+// CHOPS TEAM JADE
+
+include ../../mixins
+
+div.chops-tldr
+
+    div.subheader
+      div.subheader-rect
+      h5 TEAM
+
+
+    ul
+      li(data-tldr='leadership'): span.underline-wrapper <b>Leadership:</b> Led 2 teams of 6 and 12 direct reports. 20 hires.
+      li(data-tldr='camaraderie'): span.underline-wrapper <b>Camaraderie:</b> Well-loved by teammates. Worked with 3 on 2+ ventures.
+      li(data-tldr='ownership'): span.underline-wrapper <b>Ownership:</b> 9 entrepreneurial, eat-what-you-catch, results-oriented years.
+      li(data-tldr='communication'): span.underline-wrapper <b>Communication:</b> [&hellip;]
+
+      //
+          li <b>Communication</b> 6 speaking engagements, 20+ press interviews, web copy, 8 blog posts, and 2 marketing vids.
+          li <b>Friendliness</b> Worked with 4 colleagues on least two ventures. Mentored 2 to VIP roles.
+          li <b>Logistics</b> Setup warehouse. Roasted and shipped <span>17,000lbs of coffee per month</span>. Worked with 6 intl communities helping <span>1000s of families</span>.
+
+div.chops-details
+
+    div.chops-details-grp(data-details='leadership').hide
+
+      h6 leadership experience
+
+      p "CEO" for LazyAngel Team of 6+
+
+      ul.double-col
+          li #[+monkey(1)]<em>founder, ceo (me)</em>
+          li #[+monkey(1)]founder, design+
+          li #[+monkey(1)]cto
+          li #[+monkey(3)]remote devs
+          li + remote design & vid
+          li + NGO field teams
+
+
+      p CEO for BuyWell Team of 12+
+
+      ul.double-col
+          li #[+monkey(1)]<em>founder, ceo (me)</em>
+          li #[+monkey(1)]founder, cmo
+          li #[+monkey(1)]coo
+          li #[+monkey(1)]coffee buyer
+          li #[+monkey(1)]designer
+          li #[+monkey(1)]office manager
+          li #[+monkey(3)]warehouse ops
+          li #[+monkey(3)]sales
+
+      p Full Stack for Consulting Team of 6
+
+      ul.double-col
+          li #[+monkey(1)]cto
+          li #[+monkey(1)]<em>full stack (me)</em>
+          li #[+monkey(1)]designer
+          li #[+monkey(2)]mobile devs
+          li #[+monkey(1)]qa & customers
+
+
+
+    div.chops-details-grp(data-details='camaraderie').hide
+
+      h6 camaraderie
+
+      p My teams enjoy working with me:
+
+      ul.show-bullets
+          li The BuyWell Co-Founder worked with me on a second proj called TaxInfo. We continue to co-advise.
+          li The BuyWell Coffee Director co-founded a charity with me, and designs for our side projs.
+          li The LazyAngel CTO recruited me for full stack consulting; we also cowork on side projs.
+          li I mentored a BuyWell volunteer throughout her career: Volunteer -> Coffee Director -> Charity Founder -> Designer at thoughtbot.
+          li I mentored another BuyWell volunteer. He's now CMO of an inbound marketing agency, and credits our work together as pivotal.
+          li I co-advise for several SF friends & startups, including YC startups and YC applicants.
+
+
+    div.chops-details-grp(data-details='ownership').hide
+
+      h6 ownership
+
+      p 
+
+    div.chops-details-grp(data-details='communication').hide
+
+      h6 communication
+
+      p Examples:
+          li *Workshops:* Led press workshop at MENSA's Regional Leadership Conference, as fellow member and SME.
+          li *Press:* 20+ press interviews on TV, radio, and print
+          li *Writing:* samples on Medium: [1], [2], [3], [4]
+          li *Video:* wrote and co-produced two marketing videos: [1], [2]
+          li *Web Copy:* wrote copy for these websites: [1], [2], [3]
+
+        //li <b>Logistics</b> Setup warehouse. Roasted and shipped <span>17,000lbs of coffee per month</span>. Worked with 6 intl communities helping <span>1000s of families</span>.
+
+      p I've also done business in over 6 countries and speak 3 languages:
+
+      ul
+        +skill(3, 'English', 'Native speaker.')
+        +skill(2, 'French', 'Business conversational.')
+        +skill(1, 'Spanish', 'Clumsy, but conversational.')
+        +skill(0, 'German', 'Learning.')

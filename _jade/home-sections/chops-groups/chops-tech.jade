@@ -1,0 +1,75 @@
+// CHOPS TECH JADE
+
+include ../../mixins
+
+div.chops-tldr
+
+    div.subheader
+      div.subheader-rect
+      h5 TECH
+
+    ul
+      // li <b>DevOps:</b><br />Built and managed 2 large (20+ instance) scalable AWS production environments.
+      li(data-tldr='fullstack'): span.underline-wrapper <b>Full Stack:</b> dev’d 8 full stack apps, including ad platform optimizing 10M ads/month.
+      li(data-tldr='mobile'): span.underline-wrapper <b>Mobile:</b> built APIs and back ends for <span>5 brand name mobile apps.</span>
+      // li <b>Data Engineering:</b> Scraped, scrubbed, flagged, tagged, and gift-wrapped big data from SQL & NoSQL in real-time.
+      li(data-tldr='engineering'): span.underline-wrapper <b>Engineering:</b> worked on data, devops, and co-invented patented mobile video tech.
+
+div.chops-details
+
+    div.chops-details-grp(data-details='fullstack').hide
+
+      h6 full stack skills
+
+      ul.double-col
+        +skill(3, 'Javascript, OO')
+        +skill(3, 'jQuery')
+        +skill(1, 'D3.js')
+        +skill(3, 'Angular')
+        +skill(2, 'PHP')
+        +skill(2, 'Node.js')
+        +skill(2, 'MongoDB')
+        +skill(3, 'MySQL & PostgreSQL')
+        +skill(2, 'Firebase & Parse')
+        +skill(3, 'Redis')
+        +skill(3, 'HTML5')
+        +skill(3, 'CSS3')
+        +skill(3, 'Sass')
+        +skill(2, 'Jade')
+        +skill(2, 'Unix')
+        +skill(3, 'AWS: S3, EC2, CloudFront')
+        +skill(2, 'Heroku')
+        +skill(2, 'nginx & Apache')
+        +skill(3, 'Vim')
+        +skill(3, 'Bootstrap & Bourbon')
+        +skill(2, 'Gulp & Grunt')
+        +skill(2, 'Git')
+        +skill(0, 'Django/Python, Ruby/Rails, C', 'experimented only.')
+
+    div.chops-details-grp(data-details='mobile').hide
+
+      h6 mobile
+
+      p Lead API and back end development supporting the following mobile apps:
+
+      ul.show-bullets
+        li Jeff Gordon: racecar driver.
+        li Darrel Gwynn: racecar driver.
+        li LazyTown: children's TV show.
+        li Mamiverse: latina moms publisher.
+        li ClassicCars: hub for classic cars.
+        li Marvel (concept only).
+
+
+    div.chops-details-grp(data-details='engineering').hide
+
+      h6 engineering
+
+      p Not everything's an app. Geesh. My other engineering feats:
+
+      ul.show-bullets
+        li Co-invented a patented video protection & delivery mechanism. USPT# 213213213212
+        li Built and managed 2 large (20+ instance) scalable AWS production environments.
+        li 2 data engineering projects. Scraped, scrubbed, flagged, tagged, and gift-wrapped medium-big data from SQL & NoSQL in real-time.
+
+
