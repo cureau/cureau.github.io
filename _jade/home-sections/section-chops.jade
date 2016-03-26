@@ -22,9 +22,12 @@ section#chops-section
   div.container
     h4.section-header measured results
 
-    div.chops-row.market
-        include ./chops-groups/chops-market.jade
-    div.chops-row.team
-        include ./chops-groups/chops-team.jade
-    div.chops-row.tech
-        include ./chops-groups/chops-tech.jade
+  div.chops-row.market
+    div.chops-wrapper
+      include ./chops-groups/chops-market.jade
+  div.chops-row.team
+    div.chops-wrapper
+      include ./chops-groups/chops-team.jade
+  div.chops-row.tech
+    div.chops-wrapper
+      include ./chops-groups/chops-tech.jade

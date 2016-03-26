@@ -2,25 +2,44 @@
 
 
 #timeline-section
+  position: relative
+
+  #tvector
+    position: absolute
+    z-index: 2
+    top: 0px
+    left: 50%
+    margin: -12px 0 0 -288px
+
+  #timeline-header
+    // to match up SVG consistently
+    height: 120px
+    max-height: 120px 
 
   .row
     padding: 70px 0
     height: 500px
-    border: 1px solid red
+    //border: 1px solid red
 
   .row:nth-of-type(odd)
     .history-pics
-      float: right
-  .row:nth-of-type(even)
-    .history-pics
-      img
-        //float: right
-        //margin-right: ($column + $gutter)
+      float: left
+
+      .pic
+        right: 150px;
 
   .history-text
-    @include span-columns(6)
+    @include span-columns(4)
+    @include shift(1)
+    height: 100%
     font-size: $font-size-feature-sm
-    padding-right: $gutter
+
+    .vertical-wrapper
+      display: flex
+      flex-direction: column
+      justify-content: center
+      //border: 1px solid green
+      height: 100%
 
     h4
       text-transform: uppercase
@@ -31,14 +50,21 @@
   .history-pics
     @include span-columns(6)
     //@include span-columns(7)
+    float: right
+    position: relative
+    //border: 1px solid green
+    height: 100%
 
     .pic
+      margin: 45px auto
       repeat: no-repeat
-      position: center
+      left: 150px;
+      position: absolute
       border-radius: 50%
       height: 250px
       width: 250px
-      margin-left: ($column + $gutter)
+      z-index: 10
+      //margin-left: ($column + $gutter)
 
     #bw-pic
       background: url('/img/timeline/bw-square.jpg')
@@ -48,10 +74,5 @@
 
     #sf-pic
       background: url('/img/timeline/sf-square.jpg')
-
-
-    img
-      display: block
-      //margin: 0px auto
 
 

@@ -9,69 +9,76 @@ div.chops-tldr
     h5 MARKET
 
   ul
-    li(data-tldr='design'): span.underline-wrapper <b>UX Design:</b> Led or co-led UX and product design for a dozen products.
-    li(data-tldr='growth'): span.underline-wrapper <b>Growth:</b> Grew company from <span>$3k in savings to $2M</span> outside valuation (650x).
-    li(data-tldr='sales'): span.underline-wrapper <b>Sales:</b> CEO’d a company to <span>~$118k in monthly revenue</span>, incl. sales to <span>Whole Foods and Costco</span>.
+    li(data-tldr='growth'): span.underline-wrapper <b>Growth:</b> Grew co. from $3k to $2,000,000.
+    li(data-tldr='design'): span.underline-wrapper <b>UX Design:</b> Designed 6+ products.
+    li(data-tldr='sales'): span.underline-wrapper <b>Sales:</b> Led sales from $0 to ~$118k/m.
 
 div.chops-details
 
     div.chops-details-grp(data-details='design').hide
 
-      h6 ux design
+      +chopsBar('design')
 
-      p Designed or helped design a dozen products including an ad platform, a marketplace, a coffee brand, a dev tool, and a charity app.
+      div.chops-details-content
 
-      //ul
-          //li video SDK & service
-          //li plugins & gamification layer
-          //li wholesale & retail coffee brand
-          //li advertising platform
-          //li therapist marketplace
-          //li tontine
-          //li (helped with many others)
+          p Co-designed a dozen products: an ad platform, a marketplace, a coffee brand, a dev tool, a charity app, and more.
 
-      ul
-        +skill(3, 'Customer Interviews', '300+ customer interviews across 5 verticals: wholesale, charity, adtech, mobile, and health.')
-        +skill(3, 'Design Sprints')
-        +skill(3, 'User Stories & Paths')
-        +skill(2, 'Wireframing & Reqs')
-        +skill(2, 'Mockups (Sketch)')
-        +skill(2, 'Typography, Colors, Layout')
-        +skill(2, 'Trends (e.g., Material, Flat...)')
-        +skill(3, 'Rapid Prototyping', "Sass, Jade, Bourbon, jQuery for speed. Vanilla HTML5, CSS3, Javascript, Bootstrap too.")
+          //ul
+              //li video SDK & service
+              //li plugins & gamification layer
+              //li wholesale & retail coffee brand
+              //li advertising platform
+              //li therapist marketplace
+              //li tontine
+              //li (helped with many others)
 
-      // 300+ customer interviews across 5 verticals: wholesale, charity, adtech, mobile, and health.
+          ul
+            +skill(3, 'Customer Interviews', '300+ customer interviews across 5 verticals: wholesale, charity, adtech, mobile, and health.')
+            +skill(3, 'Design Sprints')
+            +skill(3, 'User Stories & Paths')
+            +skill(2, 'Wireframing & Reqs')
+            +skill(2, 'Mockups (Sketch)')
+            +skill(2, 'Typography, Colors, Layout')
+            +skill(2, 'Trends (e.g., Material, Flat...)')
+            +skill(3, 'Rapid Prototyping', "Sass, Jade, Bourbon, jQuery for speed. Vanilla HTML5, CSS3, Javascript, Bootstrap too.")
+
+          // 300+ customer interviews across 5 verticals: wholesale, charity, adtech, mobile, and health.
 
     div.chops-details-grp(data-details='growth').hide
 
-      h6 growth
+      +chopsBar('growth')
 
-      p Grew coffee company from $3k in saving to a multi-million dollar wholesaler employing 14 people. Got 10k users in one month for TaxInfo2008, a one-off project in college. Retained 5k monthly donors for adtech charity. Directly recruited SF's elite therapists for Airpsych marketplace.
+      div.chops-details-content
 
-      ul
-        +skill(3, 'CAC & LTV Redesign', 'For LazyAngel, cut CAC by 5x with onboarding and social.')
-        +skill(2, 'Onboarding')
-        +skill(2, 'Conversion Optimization & Analytics')
-        +skill(3, 'DB Insights (SQL & NoSQL)')
-        +skill(2, 'Beta User Recruiting')
+          p Grew coffee company from $3k in saving to a multi-million dollar wholesaler employing 14 people. Got 10k users in one month for TaxInfo2008, a one-off project in college. Retained 5k monthly donors for adtech charity. Directly recruited SF's elite therapists for Airpsych marketplace.
+
+          ul
+            +skill(3, 'CAC & LTV Redesign', 'For LazyAngel, cut CAC by 5x with onboarding and social.')
+            +skill(2, 'Onboarding')
+            +skill(2, 'Conversion Optimization & Analytics')
+            +skill(3, 'DB Insights (SQL & NoSQL)')
+            +skill(2, 'Beta User Recruiting')
+
 
     div.chops-details-grp(data-details='sales').hide
 
-      h6 sales
+      +chopsBar('sales')
 
-      p We won the following accounts to pilot a charity adtech platform. (My role: co-founder, sales.)
+      div.chops-details-content
 
-      ul.show-bullets
-          li PacSun
-          li Birchbox
-          li American Family Insurance
-          li Suubi
+          p We won the following accounts to pilot a charity adtech platform. (My role: co-founder, sales.)
 
-      p We sold coffee to these accounts. (My role: CEO, directly involved in sales.)
+          ul.show-bullets
+              li PacSun
+              li Birchbox
+              li American Family Insurance
+              li Suubi
 
-      ul.show-bullets
-          li Whole Foods
-          li Kroger
-          li Costco
-          li 50+ cafes and shops
-          li HEB & BJ's (not directly involved)
+          p We sold coffee to these accounts. (My role: CEO, directly involved in sales.)
+
+          ul.show-bullets
+              li Whole Foods
+              li Kroger
+              li Costco
+              li 50+ cafes and shops
+              li HEB & BJ's (not directly involved)

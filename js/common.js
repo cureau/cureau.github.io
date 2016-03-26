@@ -18,7 +18,57 @@ $(function() {
     // init controller
     $(window).scroll(function() {
         $(".chops-details-grp").addClass('hide');
+        var wScroll = $(window).scrollTop(),
+            adjScroll = (wScroll + 600) * 1.25; //adjusted for right logos to show
+
+        $('.logos-wrapper').css('background-position', 'center -' + adjScroll + 'px');
+
+        drawLine();
     });
 
+    // init the line length
+    drawLine(  );
+
+    //draw the line
+    function drawLine(){
+        var line = document.getElementById('timeline-line'),
+        tsPos = $('#timeline-section').offset().top,
+        fromBottom = $(window).scrollTop() - tsPos + ($(window).height()/2),
+        tHeight = $('#tvector').height();
+
+        var percentDone = fromBottom / tHeight,
+        pathLength = line.getTotalLength(),
+        length = (0.2 + (percentDone*0.8)) * pathLength;
+
+        line.style.strokeDasharray = [length, pathLength].join(' ');
+
+        var whiteLine = document.getElementById('timeline-tail-line'),
+            wPathLength = whiteLine.getTotalLength(),
+            lengthDiff = length - 3075,
+            wPercDone = lengthDiff > 0 ? lengthDiff / 250 : 0,
+            wLength = wPercDone * 250;
+
+        whiteLine.style.strokeDasharray = [wLength, wPathLength].join(' ');
+
+    }
+
+    //var $tl = $("path#timeline-line");
+
+    //// prepare SVG
+    //pathPrepare($tl);
+
+    //// init controller
+    //var controller = new ScrollMagic.Controller();
+
+    //// build tween
+    //var tween = new TimelineMax()
+        //.add(TweenMax.to($tl, 15.9, {strokeDashoffset: 0, ease:Linear.easeNone})) // draw word for 0.9
+        //.add(TweenMax.to("path", 1, {stroke: "#33629c", ease:Linear.easeNone}), 0);			// change color during the whole thing
+
+    //// build scene
+    //var scene = new ScrollMagic.Scene({triggerElement: "#timeline-section", duration: 200, tweenChanges: true})
+        //.setTween(tween)
+        //.addTo(controller);
+        ////.addIndicators() // add indicators (requires plugin)
 
 });
