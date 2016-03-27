@@ -14,38 +14,50 @@ body
   //background-color: #150c08
   background-color: $close-to-black
 
-  .section-header
-    font-family: $font-title
-    font-size: $font-size-title
-
-
 .hide
   display: none
 
+@mixin mat1-shadow()
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
+
 .mat1-shadow
   //box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
 
 .container
   @include outer-container
-  padding: 60px 0 100px
 
 .row
   @include row
-  padding: 20px 0
+  padding: 0
 
-.home-wrap
-  //display: flex
-  //flex-direction: columns
-
-  //section:odd
+#home-wrap
 
   section
-    padding: 40px 0
+    padding: 20px 0
 
-  section:nth-of-type(even)
-    background-color: $close-to-white
-    color: $close-to-black
+    .section-header
+      font-family: $font-title
+      font-size: $font-size-title
+      display: inline-block
+      margin: 8px
+      padding: 10px 20px
+      @include mat1-shadow()
 
-  section:nth-of-type(odd)
-    color: $close-to-white
+    &:nth-of-type(even)
+      background-color: $close-to-white
+      color: $close-to-black
+
+      .section-header
+        background-color: $close-to-black
+        color: $close-to-white
+        transform: rotate(-2deg)
+
+    &:nth-of-type(odd)
+      color: $close-to-white
+
+      .section-header
+        background-color: $close-to-white
+        color: $close-to-black
+        float: right
+        transform: rotate(2deg)

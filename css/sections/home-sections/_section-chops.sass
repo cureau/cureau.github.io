@@ -12,8 +12,6 @@ $chops-subheader-offset: 80px
   .chops-row.market
     .subheader-rect
       background-color: $color1
-    ul li b
-      color: $color1
     ul li:hover b
       border-bottom: 4px solid $color1
     .chops-details-grp
@@ -84,41 +82,52 @@ $chops-subheader-offset: 80px
       @include row
       @include outer-container
 
+      .subheader
+        @include row
+        font-size: $font-size-feature
+        height: $chops-subheader-offset
+        float:left
+
+        h5
+          float: left
+          margin: 0px 45px 0 12px
+
+        .subheader-rect
+          height: 45px
+          width: 20px
+          border: none
+          float: left
+
       .chops-tldr
         //border: 1px solid red
         height: 100%
-        @include span-columns(5)
+        @include span-columns(6)
 
-        .subheader
-          @include row
-          font-size: $font-size-feature
-          height: $chops-subheader-offset
-          float:left
+        .portfolio
+          font-size: $font-size-sub
+          font-weight: 200
 
-          h5
-            float: left
-            margin: 3px 0 0 12px
-
-          .subheader-rect
-            height: 45px
-            width: 20px
-            border: none
-            float: left
-        ul
-          font-size: $font-size-feature
+        p
+          font-size: $font-size-feature-sm
           font-weight: 200
           cursor: pointer
 
-          li
-            margin-bottom: 12px
+          //li
+            //margin-bottom: 12px
 
-            &:before
-              color: $color3
-              font-weight: bold
-              content: "[+] "
+            //&:before
+              //color: $color3
+              //font-weight: bold
+              //content: "[+] "
 
-          b
+          a
             text-transform: uppercase
+            color: $close-to-white
+            line-height: 1em
+            margin-right: 8px
+            display: inline-block
+            padding: 8px
+            border: 3px solid $close-to-white
 
       .chops-details
         @include span-columns(4)
@@ -218,3 +227,49 @@ $chops-subheader-offset: 80px
     ////.chops-row:nth-of-type(even) .chops-group-tldr
        ////@include shift(7)
 
+.portfolio
+  margin-top: 40px
+
+  .portfolio-square
+    @include span-columns(4)
+    position: relative
+    width: 175px
+    height: 175px
+    float: left
+    color: #888
+
+    p
+      font-family: $font-list
+
+    .proj-img
+      background:
+        position: center
+        repeat: no-repeat
+        size: contain
+      cursor: pointer
+      height: 125px
+      width: 125px
+      border-radius: 50%
+      position: absolute
+      +clearfix
+
+      p
+        width: 100%
+        text-align: center
+        position: absolute
+
+      .proj-ct
+        left: -79px
+        bottom: 47px
+        transform: rotate(-90deg)
+
+      .proj-desc
+        bottom: -35px
+
+      .proj-title
+        top: -25px
+
+      .proj-role
+        right: -80px
+        bottom: 47px
+        transform: rotate(-90deg)

@@ -6,8 +6,8 @@ mixin skill(dotsCt, item, extra)
     - if (typeof extra !== 'undefined')
         i #{extra}
 
-mixin portSquare(numba, imageID, projDesc, roleDesc)
-    p whatYou
+//mixin portSquare(numba, imageID, projDesc, roleDesc)
+    //p whatYou
 
 mixin chopsBar(title)
   div.chops-topbar
@@ -30,8 +30,10 @@ mixin dancers(ct)
     - ret += '&nbsp'
     span(class="unicon") !{ret}
 
-    //div.portfolio-square
-      //p.proj-ct #{numba}
-      ////div.proj-img(data-imgID='#{imgID}')
-      //p.proj-desc #{projDesc}
-      //p.role-desc #{roleDesc}
+mixin portSquare(numba, imgID, projDesc, projCo, roleDesc)
+    div.portfolio-square
+      div.proj-img(data-imgID='#{imgID}')
+          p.proj-ct #{numba}
+          p.proj-title #{projCo}
+          p.proj-desc #{projDesc}
+          p.proj-role #{roleDesc}

@@ -1,6 +1,9 @@
 
-mixin logoBox(who, img)
-  div.logo-box: img(src='#{img}', alt='#{who}')
+include ../mixins
+
+
+//mixin logoBox(who, img)
+  //div.logo-box: img(src='#{img}', alt='#{who}')
 
 section#clients-section
   div.container
@@ -31,8 +34,8 @@ section#clients-section
           li: span.hl Whole Foods
           li: span Yeti Video
 
-        div.portfolio
-            +portSquare('001', 'airpsych', 'Web App &mdash; Airpsych', 'Founder/Dev')
+        //div.portfolio
+            //+portSquare('001', 'airpsych', 'Web App', 'Airpsych', 'Founder/Dev')
 
 
     div.logos-col.mat1-shadow

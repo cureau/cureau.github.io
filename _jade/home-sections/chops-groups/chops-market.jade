@@ -2,16 +2,31 @@
 
 include ../../mixins
 
-div.chops-tldr
-
-  div.subheader
+div.subheader
     div.subheader-rect
     h5 MARKET
 
-  ul
-    li(data-tldr='growth'): span.underline-wrapper <b>Growth:</b> Grew co. from $3k to $2,000,000.
-    li(data-tldr='design'): span.underline-wrapper <b>UX Design:</b> Designed 6+ products.
-    li(data-tldr='sales'): span.underline-wrapper <b>Sales:</b> Led sales from $0 to ~$118k/m.
+div.chops-tldr
+
+  p
+    p(data-tldr='growth'): <a>Growth</a> Grew co. from $3k to <span class="hl">$2,000,000</span>.
+    p(data-tldr='design'): <a>UX Design</a> Designed <span class="hl">6+ products</span>.
+    p(data-tldr='sales'): <a>Sales</a> Led sales from $0 to <span class="hl">~$118k/m</span>.
+
+  div.portfolio
+    +portSquare('001', 'airpsych', 'Web App', 'Airpsych', 'Founder/Dev')
+    +portSquare('001', 'buywell', 'Coffee Pallet', 'BuyWell', 'Founder/CEO')
+    +portSquare('001', 'classiccars', 'iPhone & Data', 'ClassicCars', 'Dev & Data')
+    +portSquare('001', 'jeffgordon', '2x iPhone Apps', 'Jeff Gordon', 'Backend Dev')
+    +portSquare('001', 'stetly', 'Startup Concept', 'Stetly', 'Creator/Dev')
+    +portSquare('001', 'pushfriday', 'Creative Tool', 'PushFriday', 'Creator/Dev')
+    +portSquare('001', 'saltsearch', 'Charity Concept', 'Stetly', 'Creator/Dev')
+    +portSquare('001', 'lazyangel', 'Ad Server', 'LazyAngel Ads', 'Founder/CEO')
+    +portSquare('001', 'lazyangelH', 'Charity App', 'LazyAngel', 'Founder/CEO')
+    +portSquare('001', 'mvids', 'Video Patent', 'mvids, Yeti', 'Co-Inventor')
+    +portSquare('001', 'resumeconsole', 'ATS App', 'Resume Console', 'Helper')
+    +portSquare('001', 'mamiverse', 'iPhone App', 'Mamiverse', 'Backend Dev')
+    +portSquare('001', 'lazytown', 'iPhone App', 'LazyTown', 'Backend Dev')
 
 div.chops-details
 
@@ -42,6 +57,7 @@ div.chops-details
             +skill(2, 'Trends (e.g., Material, Flat...)')
             +skill(3, 'Rapid Prototyping', "Sass, Jade, Bourbon, jQuery for speed. Vanilla HTML5, CSS3, Javascript, Bootstrap too.")
 
+
           // 300+ customer interviews across 5 verticals: wholesale, charity, adtech, mobile, and health.
 
     div.chops-details-grp(data-details='growth').hide
@@ -58,6 +74,8 @@ div.chops-details
             +skill(2, 'Conversion Optimization & Analytics')
             +skill(3, 'DB Insights (SQL & NoSQL)')
             +skill(2, 'Beta User Recruiting')
+
+          +portSquare('001', 'airpsych', 'Web App', 'Airpsych', 'Founder/Dev')
 
 
     div.chops-details-grp(data-details='sales').hide

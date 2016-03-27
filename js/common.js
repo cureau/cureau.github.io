@@ -1,5 +1,36 @@
 $(function() {
 
+    // go through and set the images for all the porfolio thumbnails
+    $('.portfolio-square .proj-img').each(function(index){
+
+        var $this = $(this),
+            prefix = '/img/portfolio/',
+            postfix = '175.jpeg',
+            bwpostfix = '175-bw.jpeg';
+
+        var imgID = $this.attr('data-imgID');
+
+
+        $this.css('background-image', 'url("' + prefix + imgID + bwpostfix + '")');
+
+        // preload image so there's no flicker on mouseover
+        (new Image()).src = prefix + imgID + postfix;
+
+        // no good way AFAIK to set pseudoclass :hover background-image state dynamically
+        $this.mouseenter(function(){
+            var $obj = $this;
+            $obj.css('background-image', 'url("' + prefix + imgID + postfix + '")');
+            //$this.css('background-image', 'url("' + prefix + imgID + postfix + '")');
+            //$this.css('background-image', 'url("' + prefix + imgID + postfix + '")');
+        }).mouseleave(function(){
+            var $obj = $this;
+            $obj.css('background-image', 'url("' + prefix + imgID + bwpostfix + '")');
+            //$this.css('background-image', 'url("' + prefix + imgID + bwpostfix + '")');
+        });
+
+    });
+
+
     // wrap all
     //$('.chops-details-grp ul li').each(function(){
         //var $this = $(this);
