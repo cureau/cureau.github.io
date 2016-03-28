@@ -1,7 +1,15 @@
 
 $chops-subheader-offset: 80px
 
-#chops-section
+section#chops-section 
+  padding: 0px
+  position: relative
+
+  h4.section-header
+    position: absolute
+    left: 50%
+    margin-left: 150px
+    top: 25px
 
   .double-col
     @include columns(2)
@@ -15,7 +23,7 @@ $chops-subheader-offset: 80px
     ul li:hover b
       border-bottom: 4px solid $color1
     .chops-details-grp
-      border-left: 3px solid $color3
+      //border-left: 3px solid $color3
       ul .skill-dots
         color: $color1
       ul li.show-bullets::first-letter
@@ -70,9 +78,11 @@ $chops-subheader-offset: 80px
 
 
   .chops-row
-    padding-top: 80px
     height: 100vh
+    min-height: 600px
+    padding-top: 50px
     width: 100%
+    position: relative
     border-bottom: 2px solid #888
 
     &:last-child
@@ -83,6 +93,7 @@ $chops-subheader-offset: 80px
       @include outer-container
 
       .subheader
+        margin-bottom: 10px
         @include row
         font-size: $font-size-feature
         height: $chops-subheader-offset
@@ -98,27 +109,18 @@ $chops-subheader-offset: 80px
           border: none
           float: left
 
+      .row
+        margin-top: 70px
+
       .chops-tldr
-        //border: 1px solid red
         height: 100%
-        @include span-columns(6)
+        @include span-columns(7)
 
-        .portfolio
-          font-size: $font-size-sub
-          font-weight: 200
-
-        p
-          font-size: $font-size-feature-sm
+        ul.tldr-list li
+          font-size: 1.7em
           font-weight: 200
           cursor: pointer
-
-          //li
-            //margin-bottom: 12px
-
-            //&:before
-              //color: $color3
-              //font-weight: bold
-              //content: "[+] "
+          margin-bottom: 15px
 
           a
             text-transform: uppercase
@@ -129,11 +131,17 @@ $chops-subheader-offset: 80px
             padding: 8px
             border: 3px solid $close-to-white
 
+            &:hover
+              border: 3px solid $color1
+              color: $color1
+
+
       .chops-details
         @include span-columns(4)
-        @include shift(2)
+        //columns: 2
+        @include shift(1)
         //padding-top: $chops-subheader-offset
-        padding-top: 20px
+        //padding-top: 20px
 
         ul
           margin-bottom: 12px
@@ -187,57 +195,27 @@ $chops-subheader-offset: 80px
             font-family: $font-list
             font-size: 0.8em
 
-          //font-size: $font-size-feature
-          //margin-top: 15px
-          //list-style-position: inside
-          //list-style-type: none
-
-          //li
-            //font-weight: 200
-            //margin: 20px 0
-            //cursor: pointer
-
-            //span
-              ////border-bottom: 4px solid $color1
-
-            //b
-              //text-transform: uppercase
-
-
-
-      //.chops-details
-        //border: 1px solid red
-        //@include span-columns(4)
-        //@include shift(2)
-        //padding-top: 25px
-
-        //h6
-          //color: $color1
-          //font-weight: bold
-
-        //.chops-details-grp
-          //ul
-            //.skill-dots
-              //color: $color1
-
-          //li:before
-            ////content: ">>"
-            ////color: $color1
-
-    ////.chops-row:nth-of-type(even) .chops-group-tldr
-       ////@include shift(7)
-
 .portfolio
-  margin-top: 40px
+  //width: 400px
+  //left: 50%
+  //bottom: 35px
+  //margin-left: -485px
+  //@include shift(1)
+  margin: 100px 0 0 18px
+  font-size: $font-size-sub
+  font-weight: 200
+  //position: absolute
 
   .portfolio-square
-    @include span-columns(4)
     position: relative
-    width: 175px
-    height: 175px
+    width: 135px
+    height: 125px
+    //margin: 50px 0 0 0
     float: left
-    color: #888
+    color: #777
 
+    &:hover
+      color: $color1
     p
       font-family: $font-list
 
@@ -247,8 +225,8 @@ $chops-subheader-offset: 80px
         repeat: no-repeat
         size: contain
       cursor: pointer
-      height: 125px
-      width: 125px
+      height: 105px
+      width: 105px
       border-radius: 50%
       position: absolute
       +clearfix
@@ -259,17 +237,17 @@ $chops-subheader-offset: 80px
         position: absolute
 
       .proj-ct
-        left: -79px
-        bottom: 47px
+        left: -65px
+        bottom: 35px
         transform: rotate(-90deg)
 
       .proj-desc
-        bottom: -35px
+        bottom: -30px
 
       .proj-title
-        top: -25px
+        top: -20px
 
       .proj-role
-        right: -80px
-        bottom: 47px
+        right: -65px
+        bottom: 35px
         transform: rotate(-90deg)
