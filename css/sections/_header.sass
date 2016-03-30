@@ -1,14 +1,21 @@
-header
+#hero
+  height: 100vh
+  background:
+    image: url('/img/backgrounds/header-bw.jpeg')
+    size: 100% 100vh
+    repeat: no-repeat
+    position: top center
+    attachment: fixed
+
   .nav-wrapper
     @include row
     @include outer-container
     @include clearfix
     position: relative
-    top: 0px
+    top: 16px
     color: white
 
     #my-name
-      padding: 42px 4px
       margin: 0
       text-transform: uppercase
       font-weight: normal
@@ -26,7 +33,7 @@ header
         color: white
 
       li
-        padding: 42px 18px
+        padding: 0px 18px
         margin: 0px
         line-height: 1.2em
         display: inline-block
@@ -51,14 +58,11 @@ header
             border-bottom: 3px solid white
 
 
-#hero
-  height: 100vh
-
   #headshot
     .photo
       position: absolute
       left: 50%
-      top: 105px
+      top: 95px
       width: 1000px
       height: 558px
       margin-left: -280px
@@ -70,7 +74,40 @@ header
     h1
       font-size: 7em
       position: absolute
-      top: 150px
+      top: 140px
       z-index: 5
       font-family: $font-title
 
+
+  .down-arrow
+    width: 60px
+    height: 72px
+    position: absolute
+    left: 50%
+    margin-left: -30px
+    bottom: -20px
+    cursor: pointer
+    path.a1, path.a2
+      stroke: yellow
+      fill: transparent
+      stroke-width: 7px
+
+    path.a1
+      opacity: 0
+      animation: arrow 2s infinite
+      animation-delay: 1.5s
+
+    &:hover
+      path.a2
+        display: block
+        stroke: yellow
+
+  @keyframes arrow
+    0%
+      opacity: 0
+
+    50%
+      opacity: 0.8
+
+    100%
+      opacity: 0

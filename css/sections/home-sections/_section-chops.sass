@@ -5,12 +5,6 @@ section#chops-section
   padding: 0px
   position: relative
 
-  h4.section-header
-    position: absolute
-    left: 50%
-    margin-left: 150px
-    top: 25px
-
   .double-col
     @include columns(2)
 
@@ -18,51 +12,59 @@ section#chops-section
   //COLORS//
   //--------
   .chops-row.market
+    background:
+      image: url('/img/backgrounds/straws-bw.jpeg')
+      size: 100% 100vh
+      repeat: no-repeat
+      position: top center
+      attachment: fixed
     .subheader-rect
       background-color: $color1
-    ul li:hover b
-      border-bottom: 4px solid $color1
+    .chops-tldr
+      ul.tldr-list li a:hover
+        color: $color1
+        border-color: $color1
     .chops-details-grp
-      //border-left: 3px solid $color3
-      ul .skill-dots
+      ul .skill-dots, ul.show-bullets li:before, h6
         color: $color1
-      ul li.show-bullets::first-letter
-        color: $color1
-      h6
-        color: $color1
-        font-weight: bold
+    .portfolio .portfolio-square:hover
+      color: $color1
   .chops-row.team
+    background:
+      image: url('/img/backgrounds/ropes-bw.jpg')
+      size: 100% 100vh
+      repeat: no-repeat
+      position: top center
+      attachment: fixed
     .subheader-rect
       background-color: $color2
-    ul li b
-      color: $color2
-    ul li:hover b
-      border-bottom: 4px solid $color2
+    .chops-tldr
+      ul.tldr-list li a:hover
+        color: $color2
+        border-color: $color2
     .chops-details-grp
-      border-left: 3px solid $color1
-      ul .skill-dots
+      ul .skill-dots, ul.show-bullets li:before, h6
         color: $color2
-      ul li.show-bullets::first-letter
-        color: $color2
-      h6
-        color: $color2
-        font-weight: bold
+    .portfolio .portfolio-square:hover
+      color: $color2
   .chops-row.tech
+    background:
+      image: url('/img/backgrounds/cable-bw.jpg')
+      size: cover
+      repeat: no-repeat
+      position: bottom center
+      attachment: fixed
     .subheader-rect
       background-color: $color3
-    ul li b
-      color: $color3
-    ul li:hover b
-      border-bottom: 4px solid $color3
+    .chops-tldr
+      ul.tldr-list li a:hover
+        color: $color3
+        border-color: $color3
     .chops-details-grp
-      border-left: 3px solid $color2
-      ul .skill-dots
+      ul .skill-dots, ul.show-bullets li:before, h6
         color: $color3
-      ul li.show-bullets::first-letter
-        color: $color3
-      h6
-        color: $color3
-        font-weight: bold
+    .portfolio .portfolio-square:hover
+      color: $color3
 
   //-----//
 
@@ -83,7 +85,7 @@ section#chops-section
     padding-top: 50px
     width: 100%
     position: relative
-    border-bottom: 2px solid #888
+    border-bottom: 2px solid #222
 
     &:last-child
       border: none
@@ -131,15 +133,15 @@ section#chops-section
             padding: 8px
             border: 3px solid $close-to-white
 
-            &:hover
-              border: 3px solid $color1
-              color: $color1
+            //&:hover
+              //border: 3px solid $color1
+              //color: $color1
 
 
       .chops-details
         @include span-columns(4)
         //columns: 2
-        @include shift(1)
+        //@include shift(1)
         //padding-top: $chops-subheader-offset
         //padding-top: 20px
 
@@ -151,6 +153,9 @@ section#chops-section
             content: "+ "
 
       .chops-details-grp
+        margin-top: -20px
+        padding: 20px 8px
+        //background: rgba(0,0,0,.5)
         color: $close-to-white
         position: relative
         //border: 3px solid $close-to-white
@@ -214,8 +219,8 @@ section#chops-section
     float: left
     color: #777
 
-    &:hover
-      color: $color1
+    //&:hover
+      //color: $color1
     p
       font-family: $font-list
 

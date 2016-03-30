@@ -35,12 +35,17 @@ body
 
   section
     padding: 20px 0
+    position: relative
 
     .section-header
+      position: absolute
+      left: 50%
+      top: 20px
       font-family: $font-title
       font-size: $font-size-title
-      display: inline-block
-      margin: 8px
+      z-index: 20
+      //display: inline-block
+      //margin: 8px
       padding: 10px 20px
       @include mat1-shadow()
 
@@ -52,12 +57,14 @@ body
         background-color: $close-to-black
         color: $close-to-white
         transform: rotate(-2deg)
+        margin-left: -550px
 
     &:nth-of-type(odd)
       color: $close-to-white
 
       .section-header
+        top: 40px
         background-color: $close-to-white
         color: $close-to-black
-        float: right
         transform: rotate(2deg)
+        margin-left: 155px

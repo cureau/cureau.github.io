@@ -2,109 +2,118 @@
 
 include ../../mixins
 
-div.chops-tldr
-
-    div.subheader
-      div.subheader-rect
-      h5 TEAM
 
 
-    ul
-      li(data-tldr='leadership'): span.underline-wrapper <b>Leadership:</b> Led 2 teams of 5 and 12 🐵's.
-      li(data-tldr='camaraderie'): span.underline-wrapper <b>Camaraderie:</b> Well-loved by teammates.
-      li(data-tldr='communication'): span.underline-wrapper <b>Communication:</b> Uhh&hellip;
+div.subheader
+  div.subheader-rect
+  h5 TEAM
+
+
+div.row
+    div.chops-tldr
+
+        ul.tldr-list
+            li(data-tldr='leadership'): <a>Leadership</a> Led 2 teams of 5 and 12 #[+monkey(1)]'s
+            li(data-tldr='camaraderie'): <a>Camaraderie</a> Well-loved by teammates.
+            li(data-tldr='communication'): <a>Communication</a> Uhh&hellip;
+
+        div.portfolio
+          +portSquare('001', 'airpsych', 'Web App', 'Airpsych', 'Founder/Dev')
+          +portSquare('001', 'buywell', 'Coffee', 'BuyWell', 'Founder/CEO')
+          +portSquare('001', 'classiccars', 'iPhone/Data', 'ClassicCars', 'Dev & Data')
+          +portSquare('001', 'jeffgordon', '2x Apps', 'Jeff Gordon', 'Backend Dev')
 
       //
           li <b>Communication</b> 6 speaking engagements, 20+ press interviews, web copy, 8 blog posts, and 2 marketing vids.
           li <b>Friendliness</b> Worked with 4 colleagues on least two ventures. Mentored 2 to VIP roles.
           li <b>Logistics</b> Setup warehouse. Roasted and shipped <span>17,000lbs of coffee per month</span>. Worked with 6 intl communities helping <span>1000s of families</span>.
 
-div.chops-details
+    div.chops-details
 
-    div.chops-details-grp(data-details='leadership').hide
+        div.chops-details-grp(data-details='leadership').hide
 
-      +chopsBar('leadership')
+          +chopsBar('leadership')
 
-      div.chops-details-content
+          div.chops-details-content
 
-          p Founder/Lead for LazyAngel Team of 5
+              p Founder/Lead for LazyAngel Team of 5
 
-          ul.double-col
-              li #[+monkey(2)]<em>founders*</em>
-              li #[+monkey(1)]cto
-              li #[+monkey(2)]devs
+              ul.double-col
+                  li #[+monkey(2)] <em>founders*</em>
+                  li #[+monkey(1)] cto
+                  li #[+monkey(2)] devs
 
-          p CEO for BuyWell Team of 12
+              p CEO for BuyWell Team of 12
 
-          ul.double-col
-              li #[+monkey(1)]<em>founder/ceo*</em>
-              li #[+monkey(1)]founder/cmo
-              li #[+monkey(1)]coo
-              li #[+monkey(1)]coffee buyer
-              li #[+monkey(1)]designer
-              li #[+monkey(1)]office manager
-              li #[+monkey(3)]sales
-              li #[+monkey(3)]ops
+              ul.double-col
+                  li #[+monkey(1)] <em>founder/ceo*</em>
+                  li #[+monkey(1)] founder/cmo
+                  li #[+monkey(1)] coo
+                  li #[+monkey(1)] coffee buyer
+                  li #[+monkey(1)] designer
+                  li #[+monkey(1)] office manager
+                  li #[+monkey(3)] sales
+                  li #[+monkey(3)] ops
 
-          p Full Stack for Consulting Team of 6
+              p Full Stack for Consulting Team of 6
 
-          ul.double-col
-              li #[+monkey(1)]cto
-              li #[+monkey(1)]<em>full stack*</em>
-              li #[+monkey(1)]designer
-              li #[+monkey(2)]mobile devs
-              li #[+monkey(1)]qa & customers
-
-
-
-    div.chops-details-grp(data-details='camaraderie').hide
-
-      +chopsBar('camaraderie')
-
-      div.chops-details-content
-
-          p My teams enjoy working with me:
-
-          ul.show-bullets
-              li Worked with BuyWell co-founder on 2nd project, TaxInfo. We continue to co-advise.
-              li Co-founded LazyAngel with BuyWell's Coffee Buyer. She continues to design for projs.
-              li Recruited by LazyAngel CTO for full stack consulting & other side projs.
-
-          p I mentor & advise:
-
-          ul.show-bullets
-              li Mentored a few throughout their careers, as went from entry-level to VIP-level (CMO, Senior Designer...).
-              li Advise many, including YC startups & applicants.
+              ul.double-col
+                  li #[+monkey(1)] cto
+                  li #[+monkey(1)] <em>full stack*</em>
+                  li #[+monkey(1)] designer
+                  li #[+monkey(2)] mobile devs
+                  li #[+monkey(1)] qa & customers
 
 
-    div.chops-details-grp(data-details='ownership').hide
 
-      +chopsBar('ownership')
+        div.chops-details-grp(data-details='camaraderie').hide
 
-      div.chops-details-content
+          +chopsBar('camaraderie')
+
+          div.chops-details-content
+
+              p My teams enjoy working with me:
+
+              ul.show-bullets
+                  li Worked with BuyWell co-founder on 2nd project, TaxInfo. We continue to co-advise.
+                  li Co-founded LazyAngel with BuyWell's Coffee Buyer. She continues to design for projs.
+                  li Recruited by LazyAngel CTO for full stack consulting & other side projs.
+
+              p I mentor & advise:
+
+              ul.show-bullets
+                  li Mentored a few throughout their careers, as went from entry-level to VIP-level (CMO, Senior Designer...).
+                  li Advise many, including YC startups & applicants.
 
 
-    div.chops-details-grp(data-details='communication').hide
+        div.chops-details-grp(data-details='ownership').hide
 
-      +chopsBar('communication')
+          +chopsBar('ownership')
 
-      div.chops-details-content
+          div.chops-details-content
 
-          p Examples:
 
-          ul.show-bullets
-              li WORKSHOPS: Led press workshop at MENSA's Regional Leadership Conference, as fellow member and SME.
-              li PRESS: 20+ press interviews on TV, radio, and print
-              li WRITING: samples on Medium: [1], [2], [3], [4]
-              li VIDEO: wrote and co-produced two marketing videos: [1], [2]
-              li WEB COPY: wrote copy for these websites: [1], [2], [3]
+        div.chops-details-grp(data-details='communication').hide
 
-            //li <b>Logistics</b> Setup warehouse. Roasted and shipped <span>17,000lbs of coffee per month</span>. Worked with 6 intl communities helping <span>1000s of families</span>.
+          +chopsBar('communication')
 
-          p Done biz in over 6 countries in 3 languages:
+          div.chops-details-content
 
-          ul
-            +skill(3, 'English')
-            +skill(2, 'French')
-            +skill(1, 'Spanish')
-            +skill(0, 'German')
+              p Examples:
+
+              ul.show-bullets
+                  li WORKSHOPS: Led press workshop at MENSA's Regional Leadership Conference, as fellow member and SME.
+                  li PRESS: 20+ press interviews on TV, radio, and print
+                  li WRITING: samples on Medium: [1], [2], [3], [4]
+                  li VIDEO: wrote and co-produced two marketing videos: [1], [2]
+                  li WEB COPY: wrote copy for these websites: [1], [2], [3]
+
+                //li <b>Logistics</b> Setup warehouse. Roasted and shipped <span>17,000lbs of coffee per month</span>. Worked with 6 intl communities helping <span>1000s of families</span>.
+
+              p Done biz in over 6 countries in 3 languages:
+
+              ul
+                +skill(3, 'English')
+                +skill(2, 'French')
+                +skill(1, 'Spanish')
+                +skill(0, 'German')

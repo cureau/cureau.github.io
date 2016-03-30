@@ -30,7 +30,12 @@ $(function() {
 
     });
 
-
+    $('#hero .down-arrow').on('click', function() {
+        var scrollHeight = $(window).height();
+        $('html, body').stop().animate({scrollTop:scrollHeight}, '500', 'swing', function() {
+            $('#hero .down-arrow').hide();
+        });
+    });
     // wrap all
     //$('.chops-details-grp ul li').each(function(){
         //var $this = $(this);

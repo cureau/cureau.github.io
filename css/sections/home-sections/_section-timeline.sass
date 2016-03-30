@@ -1,8 +1,9 @@
 
 
 
-#timeline-section
+section#timeline-section
   position: relative
+  padding-top: 290px
 
   #tvector
     position: absolute
@@ -17,48 +18,37 @@
     //max-height: 120px 
 
   .row
-    padding: 70px 0
     height: 500px
-    //border: 1px solid red
-
-  .row:nth-of-type(odd)
-    .history-pics
-      float: left
-
-      .pic
-        right: 150px;
-
-  .history-text
-    @include span-columns(4)
-    @include shift(1)
-    height: 100%
-    font-size: $font-size-feature-sm
-
-    .vertical-wrapper
-      display: flex
-      flex-direction: column
-      justify-content: center
-      //border: 1px solid green
-      height: 100%
-
-    h4
-      text-transform: uppercase
-
-    h5
-      font-weight: normal
-
-  .history-pics
-    @include span-columns(6)
-    //@include span-columns(7)
-    float: right
     position: relative
-    //border: 1px solid green
-    height: 100%
+
+    &:nth-of-type(odd)
+      .pic
+        margin-left: -385px
+      .history-text
+        margin-left: 112px
+
+    &:last-child
+      margin-bottom: 100px
+
+    .history-text
+      top: 130px
+      margin-left: -422px
+      position: absolute
+      width: 350px
+      left: 50%
+      font-size: $font-size-feature-sm
+
+      h4
+        text-transform: uppercase
+
+      h5
+        font-weight: normal
 
     .pic
-      margin: 45px auto
+      margin-left: 100px
+      top: 130px
       repeat: no-repeat
-      left: 150px;
+      left: 50%;
       position: absolute
       border-radius: 50%
       height: 250px
