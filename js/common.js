@@ -67,11 +67,16 @@ $(function() {
 
         //console.log(wScroll);
         var chopsDiff = chops.offset().top - wScroll;
-        if (chopsDiff <= 0 && chopsDiff >= -2000) {
+        if (chopsDiff <= 0 && chopsDiff >= -2100) {
             showcase.removeClass('positioned').addClass('floating');
-        //} else if (chopsDiff < 0 || chopsDiff <= -1391){
+            if (chopsDiff <= -1920) {
+              showcase.css('top', (1950 + chopsDiff) + 'px');
+            } else {
+                showcase.css('top', '40px');
+            }
         } else {
             showcase.removeClass('floating').addClass('positioned');
+            showcase.css('top', '40px');
         }
     });
 
