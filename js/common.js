@@ -22,11 +22,14 @@ $(function() {
             $obj.css('background-image', 'url("' + prefix + imgID + postfix + '")');
             //$this.css('background-image', 'url("' + prefix + imgID + postfix + '")');
             //$this.css('background-image', 'url("' + prefix + imgID + postfix + '")');
+            $(".chops-details-grp").addClass('hide');
+            $(".chops-details-grp[data-details='" + imgID + "']").removeClass('hide');
         }).mouseleave(function(){
             var $obj = $this;
             $obj.css('background-image', 'url("' + prefix + imgID + bwpostfix + '")');
             //$this.css('background-image', 'url("' + prefix + imgID + bwpostfix + '")');
         });
+
 
     });
 

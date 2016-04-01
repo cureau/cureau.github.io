@@ -17,8 +17,8 @@
     @include span-columns(8)
 
     #clients-list
-      font-family: "Cousine"
-      font-size: 0.9em
+      font-family: $font-feature
+      font-size: $font-size-feature-sm
       list-style-position: inside
       list-style-type: none
       columns: 3
@@ -31,10 +31,10 @@
         margin-bottom: 12px
 
       li::first-letter
-        color: #888
+        //color: red
 
       li:before
-        content: "● "
+        //content: "● "
         //font-family: $font2
 
   .logos-col

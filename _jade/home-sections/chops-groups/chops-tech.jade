@@ -15,10 +15,15 @@ div.row
         li(data-tldr='mobile'): <a>Mobile</a> back ends for 5 mobile apps.
         li(data-tldr='engineering'): <a>Engineering</a> data, devops, & video patent.
       div.portfolio
-        +portSquare('001', 'airpsych', 'Web App', 'Airpsych', 'Founder/Dev')
-        +portSquare('001', 'buywell', 'Coffee', 'BuyWell', 'Founder/CEO')
         +portSquare('001', 'classiccars', 'iPhone/Data', 'ClassicCars', 'Dev & Data')
-        +portSquare('001', 'jeffgordon', '2x Apps', 'Jeff Gordon', 'Backend Dev')
+        +portSquare('001', 'pushfriday', 'Creative Tool', 'PushFriday', 'Creator/Dev')
+        +portSquare('001', 'lazytown', 'iPhone Apps', 'Various', 'Backend Dev')
+        +portSquare('001', 'mvids', 'Video Patent', 'mvids, Yeti', 'Co-Inventor')
+
+    //+portSquare('001', 'mvids', 'Video Patent', 'mvids, Yeti', 'Co-Inventor')
+    //+portSquare('001', 'stetly', 'Concept', 'Stetly', 'Creator/Dev')
+    //+portSquare('001', 'mamiverse', 'iPhone App', 'Mamiverse', 'Backend Dev')
+    //+portSquare('001', 'resumeconsole', 'ATS App', 'Resume Console', 'Helper')
 
     div.chops-details
 
@@ -79,8 +84,36 @@ div.row
               p Some other engineering feats:
 
               ul.show-bullets
-                li Co-invented a patented video protection & delivery mechanism. USPT# 213213213212
+                li Co-invented a patented video protection & delivery mechanism. <a href="http://www.google.com/patents/US20140270167" target="_blank">USPTO# 213213213212</a>
                 li Built and managed 2 large (20+ instance) scalable AWS production environments.
-                li 2 data engineering projects. Scraped, scrubbed, flagged, tagged, and gift-wrapped medium-big data from SQL & NoSQL in real-time.
+                li 2 data engineering projects with SQL & NoSQL real-time data.
 
+        //+portSquare('001', 'classiccars', 'iPhone/Data', 'ClassicCars', 'Dev & Data')
+        //+portSquare('001', 'pushfriday', 'Creative Tool', 'PushFriday', 'Creator/Dev')
+        //+portSquare('001', 'jeffgordon', '2x Apps', 'Jeff Gordon', 'Backend Dev')
+        //+portSquare('001', 'lazytown', 'iPhone App', 'LazyTown', 'Backend Dev')
+
+        div.chops-details-grp(data-details='classiccars').showcase-photo.hide
+          +chopsBar('classic cars')
+          div.chops-details-content
+              img(src="/img/portfolio/classiccars275.jpeg")
+              p Engineered ClassicCar's data processing system to scrape, scrub, flag, tag, and gift-wrap medium-big car data. Also built the backend that supports their iPhone app.
+
+        div.chops-details-grp(data-details='pushfriday').showcase-photo.hide
+          +chopsBar('pushfriday')
+          div.chops-details-content
+              img(src="/img/portfolio/pushfriday275.jpeg")
+              p Can build full stack apps really fast. Our data viz group Mainstem had challenge to create one thing every week. For the first week, I created PushFriday to host this challenge. See <a href="https://www.behance.net/gallery/35414261/PushFriday-(Side-Proj-for-Mainstem)" target="_blank">screenshots</a>.
+
+        div.chops-details-grp(data-details='lazytown').showcase-photo.hide
+          +chopsBar('iPhone APIs')
+          div.chops-details-content
+              img(src="/img/portfolio/lazytown275.jpeg")
+              p Built backend support and APIs for several clients including LazyTown (popular kid's TV show), Jeff Gordon, Darrel Gwynn, Mamiverse, mVids, ClassicCars, and a concept for Marvel.
+
+        div.chops-details-grp(data-details='mvids').showcase-photo.hide
+          +chopsBar('Video Delivery Patent')
+          div.chops-details-content
+              img(src="/img/portfolio/mvids275.jpeg")
+              p Mike and I co-invented a video delivery protection technology used in several iPhone apps. Patented by Startal. Yeti.io attempted to commercialize it (seperately). See <a href="http://www.google.com/patents/US20140270167" target="_blank">mobile video patent</a>.
 

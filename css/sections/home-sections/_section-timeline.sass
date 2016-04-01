@@ -25,17 +25,27 @@ section#timeline-section
     height: 500px
     position: relative
 
+    h1
+      font-size: 21em
+      position: absolute
+      color: #d4d4d4
+      right: 10px
+      top: -50px
+
     &:nth-of-type(odd)
       .pic
         margin-left: -385px
       .history-text
         margin-left: 112px
+      h1
+        left: 10px
 
     &:last-child
       margin-bottom: 100px
 
+
     .history-text
-      top: 130px
+      top: 115px
       margin-left: -422px
       position: absolute
       width: 350px
@@ -44,9 +54,13 @@ section#timeline-section
 
       h4
         text-transform: uppercase
+        font-size: 1.3em
 
       h5
         font-weight: normal
+
+      p
+        font-weight: 200
 
     .pic
       margin-left: 100px

@@ -1,4 +1,4 @@
-#hero
+section#hero
   height: 100vh
   background-color: $close-to-black
   background:
@@ -14,7 +14,7 @@
     @include clearfix
     position: relative
     top: 16px
-    color: white
+    color: #ccc
 
     #my-name
       margin: 0
@@ -52,11 +52,11 @@
           cursor: pointer
           display: inline-block
           text-decoration: none
-          color: white
+          color: #ccc
           text-transform: uppercase
 
           &:hover, &.active
-            border-bottom: 3px solid white
+            border-bottom: 3px solid #ccc
 
 
   #headshot
@@ -87,10 +87,10 @@
     left: 50%
     margin-left: -30px
     z-index: 10
-    bottom: -80px
-    cursor: pointer
+    bottom: -20px
+    cursor: default
     path.a1, path.a2
-      stroke: black
+      stroke: #ccc
       fill: transparent
       stroke-width: 7px
 
@@ -99,10 +99,10 @@
       animation: arrow 2s infinite
       animation-delay: 1.5s
 
-    &:hover
-      path.a2
-        display: block
-        stroke: yellow
+    //&:hover
+      //path.a2
+        //display: block
+        //stroke: yellow
 
   @keyframes arrow
     0%
