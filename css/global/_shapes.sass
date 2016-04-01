@@ -1,0 +1,110 @@
+
+
+// shape default
+.shape-fat-rect
+  position: absolute
+  top: 0px
+  height: 100%
+  width: 185px
+  background: $close-to-white
+  z-index: 5
+  //background:
+    //image: url('/img/backgrounds/patterns/trees2.jpg')
+    //attachment: fixed
+    //repeat: repeat
+    //position: left center
+
+  &.left
+    left: 50%
+    margin-left: -650px
+
+.shape-slim-rect
+  position: absolute
+  top: 0px
+  height: 100%
+  width: 55px
+  background: $close-to-white
+  //background:
+    //image: url('/img/backgrounds/patterns/trees.jpg')
+    //attachment: fixed
+    //repeat: repeat
+    //position: left center
+
+  &.right
+    right: 0px
+  &.left
+    left: 0px
+
+.shape-long-rect
+  position: absolute
+  display: none
+  height: 25px
+  width: 70%
+  background: $close-to-white
+  z-index: 8
+  //background:
+    //image: url('/img/backgrounds/patterns/trees.jpg')
+    //attachment: fixed
+    //repeat: repeat
+    //position: left center
+
+
+  &.top-left
+    top: 0px
+    left: 0px
+    width: 40%
+  &.top-right
+    top: 0px
+    right: 0px
+  &.bottom-left
+    bottom: 0px
+    left: 0px
+  &.bottom-right
+    right: 0px
+    bottom: 0px
+
+.shape-tri
+  position: absolute
+  width: 72%
+  height: 250px
+  top: -180px
+  overflow: hidden
+  background:
+    image: url('/img/backgrounds/header.jpeg')
+    repeat: no-repeat
+    position: left center
+
+  //.inner-bg
+    //width: 150%
+    //position: absolute
+    //left: -40px
+    //height: 100%
+    //background-image: radial-gradient(closest-side, transparent 0%, transparent 75%, #B6CC66 76%, #B6CC66 85%, #EDFFDB 86%, #EDFFDB 94%, #FFFFFF 95%, #FFFFFF 103%, #D9E6A7 104%, #D9E6A7 112%, #798B3C 113%, #798B3C 121%, #FFFFFF 122%, #FFFFFF 130%, #E0EAD7 131%, #E0EAD7 140%), radial-gradient(closest-side, transparent 0%, transparent 75%, #B6CC66 76%, #B6CC66 85%, #EDFFDB 86%, #EDFFDB 94%, #FFFFFF 95%, #FFFFFF 103%, #D9E6A7 104%, #D9E6A7 112%, #798B3C 113%, #798B3C 121%, #FFFFFF 122%, #FFFFFF 130%, #E0EAD7 131%, #E0EAD7 140%);
+    //background-size: 110px 110px;
+    //background-color: #C8D3A7;
+    //background-position: 0 0, 55px 55px;
+
+
+  &.left
+    transform: rotate(-12deg)
+    left: -70px
+    right: auto
+
+  &.right
+    transform: rotate(12deg)
+    right: -70px
+    left: auto
+
+  &.bottom-left
+    transform: rotate(12deg)
+    left: -70px
+    right: auto
+    top: auto
+    bottom: -180px
+
+  &.bottom-right
+    transform: rotate(-12deg)
+    right: -70px
+    left: auto
+    top: auto
+    bottom: -180px

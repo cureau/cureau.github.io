@@ -1,7 +1,8 @@
 #hero
   height: 100vh
+  background-color: $close-to-black
   background:
-    image: url('/img/backgrounds/header-bw.jpeg')
+    //image: url('/img/backgrounds/header-bw.jpeg')
     size: 100% 100vh
     repeat: no-repeat
     position: top center
@@ -85,10 +86,11 @@
     position: absolute
     left: 50%
     margin-left: -30px
-    bottom: -20px
+    z-index: 10
+    bottom: -80px
     cursor: pointer
     path.a1, path.a2
-      stroke: yellow
+      stroke: black
       fill: transparent
       stroke-width: 7px
 

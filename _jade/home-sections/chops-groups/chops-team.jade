@@ -38,31 +38,33 @@ div.row
 
               p Founder/Lead for LazyAngel Team of 5
 
+              - var monkey = '&#x1F435;'
+
               ul.double-col
-                  li #[+monkey(2)] <em>founders*</em>
-                  li #[+monkey(1)] cto
-                  li #[+monkey(2)] devs
+                  li !{monkey + monkey} <em>founders*</em>
+                  li !{monkey} cto
+                  li !{monkey + monkey} devs
 
               p CEO for BuyWell Team of 12
 
               ul.double-col
-                  li #[+monkey(1)] <em>founder/ceo*</em>
-                  li #[+monkey(1)] founder/cmo
-                  li #[+monkey(1)] coo
-                  li #[+monkey(1)] coffee buyer
-                  li #[+monkey(1)] designer
-                  li #[+monkey(1)] office manager
-                  li #[+monkey(3)] sales
-                  li #[+monkey(3)] ops
+                  li !{monkey} <em>founder/ceo*</em>
+                  li !{monkey} founder/cmo
+                  li !{monkey} coo
+                  li !{monkey} coffee buyer
+                  li !{monkey} designer
+                  li !{monkey} office manager
+                  li !{monkey + monkey + monkey} sales
+                  li !{monkey + monkey + monkey} ops
 
               p Full Stack for Consulting Team of 6
 
               ul.double-col
-                  li #[+monkey(1)] cto
-                  li #[+monkey(1)] <em>full stack*</em>
-                  li #[+monkey(1)] designer
-                  li #[+monkey(2)] mobile devs
-                  li #[+monkey(1)] qa & customers
+                  li !{monkey} cto
+                  li !{monkey} <em>full stack*</em>
+                  li !{monkey} designer
+                  li !{monkey + monkey} mobile devs
+                  li !{monkey} qa & customers
 
 
 

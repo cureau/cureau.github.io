@@ -30,12 +30,13 @@ $(function() {
 
     });
 
-    $('#hero .down-arrow').on('click', function() {
-        var scrollHeight = $(window).height();
-        $('html, body').stop().animate({scrollTop:scrollHeight}, '500', 'swing', function() {
-            $('#hero .down-arrow').hide();
-        });
-    });
+    //$("#showcase").pin({containerSelector: "section#chops-section", padding: {top: 30, right: 0}});
+    //$('#hero .down-arrow').on('click', function() {
+        //var scrollHeight = $(window).height();
+        //$('html, body').stop().animate({scrollTop:scrollHeight}, '1500', 'swing', function() {
+            //$('#hero .down-arrow').hide();
+        //});
+    //});
     // wrap all
     //$('.chops-details-grp ul li').each(function(){
         //var $this = $(this);
@@ -60,8 +61,30 @@ $(function() {
         $('.logos-wrapper').css('background-position', 'center -' + adjScroll + 'px');
 
         drawLine();
+
+        var showcase = $('#showcase');
+        var chops = $('#chops-section');
+
+        //console.log(wScroll);
+        var chopsDiff = chops.offset().top - wScroll;
+        if (chopsDiff <= 0 && chopsDiff >= -2000) {
+            showcase.removeClass('positioned').addClass('floating');
+        //} else if (chopsDiff < 0 || chopsDiff <= -1391){
+        } else {
+            showcase.removeClass('floating').addClass('positioned');
+        }
     });
 
+    $('a[href^="#"]').on('click',function (e) {
+        e.preventDefault();
+        var href = $(this).attr('href');
+        var $target = $(href + '-section');
+        console.log($target);
+
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top
+        }, 1200, 'swing');
+    });
     // init the line length
     drawLine(  );
 

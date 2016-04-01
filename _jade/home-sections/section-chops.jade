@@ -18,15 +18,25 @@
 
 
 section#chops-section
-
-  h4.section-header showcase
+  h4.section-header#showcase showcase
+  div.shape-tri.right#shp-chops-top
 
   div.chops-row.market
+    div.shape-slim-rect.left#shp-market-left
+    div.shape-slim-rect.right
     div.chops-wrapper
       include ./chops-groups/chops-market.jade
   div.chops-row.team
+    div.shape-slim-rect.left
+    //div.shape-slim-rect.right
+    //div.shape-long-rect.top-left
+    //div.shape-slim-rect.right#shp-team-right
     div.chops-wrapper
       include ./chops-groups/chops-team.jade
   div.chops-row.tech
+    div.shape-slim-rect.left#shp-market-left
+    div.shape-slim-rect.right
+    //div.shape-long-rect.top-right
+    //div.shape-tri.bottom-left
     div.chops-wrapper
       include ./chops-groups/chops-tech.jade

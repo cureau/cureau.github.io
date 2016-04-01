@@ -1,11 +1,12 @@
 
-section#cta
-  background:
-    image: url('/img/backgrounds/footer-bw.jpeg')
-    size: 100% 100vh
-    repeat: no-repeat
-    position: top center
-    attachment: fixed
+section#cta-section
+  //background:
+    //image: url('/img/backgrounds/footer-bw.jpeg')
+    //size: 100% 100vh
+    //repeat: no-repeat
+    //position: top center
+    //attachment: fixed
+  background: $close-to-black
   text-align: center
   padding: 200px 0
   height: 100vh
@@ -14,12 +15,17 @@ section#cta
   h4#letschat.section-header
     display: inline-block
     position: absolute
-    text-align: center
+    text-align: left
     top: 200px
     transform: rotate(0deg)
     left: 50%
     right: auto
     bottom: auto
+    background: none
+    line-height: 1.4em
+    border: none
+    color: $close-to-white
+    box-shadow: none
     margin-left: -150px
 
   #tvector-tail
@@ -29,10 +35,46 @@ section#cta
     left: 50%
     margin: -0px 0 0 120px
 
+  #coffee-pic
+    width: 475px
+    height: 294px
+    left: 50%
+    margin-left: -650px
+    position: absolute
+    top: 200px
+    background:
+      image: url('/img/backgrounds/coffee.jpg')
+      repeat: no-repeat
+
+  @include keyframes(dotExpl)
+    from
+      transform: scale3d(1, 1, 1)
+
+    50%
+      transform: scale3d(1.25, 1.25, 1.25)
+
+    to
+      transform: scale3d(1, 1, 1)
+
+  #dot
+    width: 20px
+    height: 20px
+    background-color: white
+    position: absolute
+    margin-left: 177px
+    top: 258px
+    left: 50%
+    border-radius: 10px
+    @include animation(dotExpl 2s linear)
+
+
   #email-me
-    font-size: $font-size-title
-    font-family: $font-title
-    margin-top: 300px
+    color: yellow
+    cursor: pointer
+    @include animation(dotExpl 2s linear)
+
+    &:hover
+      border-bottom: 5px solid yellow
 
   #schedule-btn
     display: inline-box

@@ -12,7 +12,7 @@ body
   //background-color: #1b130c
   //background-color: #0d0905
   //background-color: #150c08
-  background-color: $close-to-black
+  //background-color: $close-to-black
 
 .hide
   display: none
@@ -31,11 +31,14 @@ body
   @include row
   padding: 0
 
+
+
 #home-wrap
 
   section
     padding: 20px 0
     position: relative
+    overflow: hidden
 
     .section-header
       position: absolute
@@ -61,6 +64,8 @@ body
 
     &:nth-of-type(odd)
       color: $close-to-white
+      //background-color: $close-to-white
+      //color: $close-to-black
 
       .section-header
         top: 40px
