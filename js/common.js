@@ -45,23 +45,33 @@ $(function() {
       //});
     //
 
-    $('.chops-tldr ul li').on('mouseover', function() {
-        $(".chops-details-grp");
-        $(".chops-details-grp[data-details='" + $(this).data('tldr') + "']").addClass('show');
+    $('.chops-tldr ul li a').on('mouseover', function() {
+        $(".chops-details-grp").removeClass('show');
+        $(".chops-details-grp[data-details='" + $(this).parent().data('tldr') + "']").addClass('show');
     }).on('mouseout', function() {
         // TODO: actually just start timer
-        $(".chops-details-grp[data-details='" + $(this).data('tldr') + "']").removeClass('show');
+        if (!$(this).is(":focus")) {
+            console.log('a');
+            $(".chops-details-grp[data-details='" + $(this).parent().data('tldr') + "']").removeClass('show');
+        }
         //$(".chops-details-grp[data-details='" + $(this).data('tldr') + "']").addClass('hide');
+    }).on('click', function(){
+        $(".chops-details-grp").removeClass('show');
+        $(".chops-details-grp[data-details='" + $(this).parent().data('tldr') + "']").addClass('show');
     });
 
     // init controller
     $(window).scroll(function() {
         $(".chops-details-grp").removeClass('show');
         var wScroll = $(window).scrollTop(),
-            adjScroll = (wScroll + 600) * 1.25; //adjusted for right logos to show
+            adjScroll = (wScroll + 600) * 1.25, //adjusted for right logos to show
+            h1Scroll = wScroll/3 - 1400;
 
+            console.log((wScroll-3400)/4);
         $('.logos-wrapper').css('background-position', 'center -' + adjScroll + 'px');
 
+        console.log(h1Scroll);
+        $('#timeline-section h1').css('bottom', h1Scroll + 'px');
         drawLine();
 
         var showcase = $('#showcase');
@@ -104,7 +114,7 @@ $(function() {
 
         var percentDone = fromBottom / tHeight,
         pathLength = line.getTotalLength(),
-        length = (0.2 + (percentDone*0.8)) * pathLength;
+        length = (0.15 + (percentDone*0.85)) * pathLength;
 
         line.style.strokeDasharray = [length, pathLength].join(' ');
 
