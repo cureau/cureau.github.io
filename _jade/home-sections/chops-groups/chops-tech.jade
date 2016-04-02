@@ -11,9 +11,19 @@ div.row
 
 
       ul.tldr-list
-        li(data-tldr='fullstack'): <a>Full Stack</a> 5+ web apps. 10M/m ad platform.
-        li(data-tldr='mobile'): <a>Mobile</a> back ends for 5 mobile apps.
-        li(data-tldr='engineering'): <a>Engineering</a> data, devops, & video patent.
+        li(data-tldr='fullstack')
+          a(href="#", data-hover="Flask Cult")
+            span Full Stack
+          span.tldr-desc 5+ web apps. 10M/m ad platform.
+        li(data-tldr='mobile')
+          a(href="#", data-hover="BileOm")
+            span Mobile
+          span.tldr-desc 12 back ends for 5 mobile apps.
+        li(data-tldr='engineering')
+          a(href="#", data-hover="GenieEnGrin")
+            span Engineering
+          span.tldr-desc data, devops, & video patent.
+
       div.portfolio
         +portSquare('001', 'classiccars', 'iPhone/Data', 'ClassicCars', 'Dev & Data')
         +portSquare('001', 'pushfriday', 'Creative Tool', 'PushFriday', 'Creator/Dev')
@@ -27,7 +37,7 @@ div.row
 
     div.chops-details
 
-        div.chops-details-grp(data-details='fullstack').hide
+        div.chops-details-grp(data-details='fullstack')
 
           +chopsBar('full stack')
 
@@ -58,7 +68,7 @@ div.row
                 +skill(2, 'Git')
                 +skill(0, 'Django/Python, Ruby/Rails, C', '(dabbled)')
 
-        div.chops-details-grp(data-details='mobile').hide
+        div.chops-details-grp(data-details='mobile')
 
           +chopsBar('mobile')
 
@@ -75,7 +85,7 @@ div.row
                 li Marvel (concept only).
 
 
-        div.chops-details-grp(data-details='engineering').hide
+        div.chops-details-grp(data-details='engineering')
 
           +chopsBar('engineering')
 
@@ -93,25 +103,25 @@ div.row
         //+portSquare('001', 'jeffgordon', '2x Apps', 'Jeff Gordon', 'Backend Dev')
         //+portSquare('001', 'lazytown', 'iPhone App', 'LazyTown', 'Backend Dev')
 
-        div.chops-details-grp(data-details='classiccars').showcase-photo.hide
+        div.chops-details-grp(data-details='classiccars').showcase-photo
           +chopsBar('classic cars')
           div.chops-details-content
               img(src="/img/portfolio/classiccars275.jpeg")
               p Engineered ClassicCar's data processing system to scrape, scrub, flag, tag, and gift-wrap medium-big car data. Also built the backend that supports their iPhone app.
 
-        div.chops-details-grp(data-details='pushfriday').showcase-photo.hide
+        div.chops-details-grp(data-details='pushfriday').showcase-photo
           +chopsBar('pushfriday')
           div.chops-details-content
               img(src="/img/portfolio/pushfriday275.jpeg")
               p Can build full stack apps really fast. Our data viz group Mainstem had challenge to create one thing every week. For the first week, I created PushFriday to host this challenge. See <a href="https://www.behance.net/gallery/35414261/PushFriday-(Side-Proj-for-Mainstem)" target="_blank">screenshots</a>.
 
-        div.chops-details-grp(data-details='lazytown').showcase-photo.hide
+        div.chops-details-grp(data-details='lazytown').showcase-photo
           +chopsBar('iPhone APIs')
           div.chops-details-content
               img(src="/img/portfolio/lazytown275.jpeg")
               p Built backend support and APIs for several clients including LazyTown (popular kid's TV show), Jeff Gordon, Darrel Gwynn, Mamiverse, mVids, ClassicCars, and a concept for Marvel.
 
-        div.chops-details-grp(data-details='mvids').showcase-photo.hide
+        div.chops-details-grp(data-details='mvids').showcase-photo
           +chopsBar('Video Delivery Patent')
           div.chops-details-content
               img(src="/img/portfolio/mvids275.jpeg")

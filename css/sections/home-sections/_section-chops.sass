@@ -1,3 +1,5 @@
+/* Effect 10: reveal, push out
+
 
 $chops-subheader-offset: 80px
 
@@ -41,14 +43,15 @@ section#chops-section
       border: 10px solid $close-to-black
       padding: 25px
     .chops-tldr
-      ul.tldr-list li a:hover
-        color: $color1
-        border-color: $color1
+      ul.tldr-list li a::before
+          background-color: $color1
     .chops-details-grp
       ul .skill-dots, ul.show-bullets li:before
         color: $color1
     .portfolio .portfolio-square:hover
-      color: $color1
+        color: $color1
+        .proj-img:after
+          background-color: $color1
   .chops-row.team
     background-color: $close-to-white
     color: $close-to-black
@@ -72,14 +75,15 @@ section#chops-section
     .subheader-rect
       background-color: $color2
     .chops-tldr
-      ul.tldr-list li a:hover
-        color: $color2
-        border-color: $color2
+      ul.tldr-list li a::before
+          background-color: $color2
     .chops-details-grp
       ul .skill-dots, ul.show-bullets li:before
         color: $color2
     .portfolio .portfolio-square:hover
       color: $color2
+      .proj-img:after
+        background-color: $color2
   .chops-row.tech
     color: $close-to-black
     margin-bottom: 0px
@@ -96,14 +100,15 @@ section#chops-section
     .subheader-rect
       background-color: $color3
     .chops-tldr
-      ul.tldr-list li a:hover
-        color: $color3
-        border-color: $color3
+      ul.tldr-list li a::before
+          background-color: $color3
     .chops-details-grp
       ul .skill-dots, ul.show-bullets li:before
         color: $color3
     .portfolio .portfolio-square:hover
       color: $color3
+      .proj-img:after
+        background-color: $color3
 
   //-----//
 
@@ -163,24 +168,57 @@ section#chops-section
           font-size: 1.7em
           font-weight: 200
           cursor: pointer
-          margin-bottom: 15px
+          margin-bottom: 8px
+          clear: both
+
+          .tldr-desc
+             float: left
+             display: block
+             padding-top: 4px
 
           a
             text-transform: uppercase
             color: $close-to-black
             line-height: 1em
-            margin-right: 8px
-            display: inline-block
             padding: 8px
+            float: left
+            margin: 0 8px 12px 0
+            display: block
             border: 3px solid $close-to-black
+            position: relative
+            overflow: hidden
+            display: inline-block
+            outline: none
+            text-decoration: none
 
-            //&:hover
-              //border: 3px solid $color1
-              //color: $color1
+            &:hover, &:focus
+              outline: none
+            span
+              display: block
+              transition: transform 0.4s
+            &::before
+              position: absolute
+              top: 0
+              left: 0
+              z-index: -1
+              padding: 8px
+              color: $close-to-white
+              width: 100%
+              height: 100%
+              //background: $close-to-black
+              content: attr(data-hover)
+              transform: translateX(-100%)
+              transition: transform 0.4s
+            &:hover span, &:focus span
+              transform: translateX(110%)
+            &:hover::before, &:focus::before
+              transform: translateX(0%)
+
 
 
       .chops-details
         @include span-columns(4)
+        position: relative
         //columns: 2
         //@include shift(1)
         //padding-top: $chops-subheader-offset
@@ -196,10 +234,15 @@ section#chops-section
       .chops-details-grp
         margin-top: -20px
         padding: 20px 8px
-        //background: rgba(0,0,0,.5)
         color: $close-to-black
-        position: relative
-        //border: 3px solid $close-to-white
+        position: absolute
+        opacity: 0
+        +transform(translateX(-12%))
+        @include transition(all 250ms ease-in-out)
+
+        &.show
+          +transform(translateX(0%))
+          opacity: 1
 
         .chops-topbar
           position: relative
@@ -261,14 +304,28 @@ section#chops-section
   .portfolio-square
     position: relative
     width: 135px
+    //background-color: green
+    padding: 30px
+    margin: -30px 0 0 0px
+    //margin-top: -60px
+    cursor: pointer
     margin-bottom: 20px
-    height: 125px
+    height: 165px
     //margin: 50px 0 0 0
     float: left
     color: #777
 
-    //&:hover
-      //color: $color1
+    &:hover
+      .proj-img
+        background: rgba(255,255,255,0)
+        .proj-desc
+          bottom: -40px
+        .proj-title
+          top: -30px
+        &:after
+          transform: scale(1)
+          opacity: 0.7
+
     p
       font-family: $font-list
 
@@ -280,9 +337,31 @@ section#chops-section
       cursor: pointer
       height: 105px
       width: 105px
+      //border: 3px solid $close-to-black
       border-radius: 50%
-      position: absolute
+      position: relative
+      text-align: center
+      z-index: 1
+      display: inline-block
+      //overflow:hidden
       +clearfix
+      transition: all 0.3s
+      &:after
+        pointer-events: none
+        position: absolute
+        width: 105px
+        height: 100%
+        border-radius: 50%
+        content: ''
+        //background-color: red
+        padding: 7px
+        box-shadow: 0 0 0 4px black
+        transition: all 0.3s
+        transform: scale(.8)
+        opacity: 0
+      &:before
+        line-height: 90px
+        display: block
 
       p
         width: 100%
@@ -294,11 +373,17 @@ section#chops-section
         bottom: 35px
         transform: rotate(-90deg)
 
+
       .proj-desc
         bottom: -30px
+        transition: all 0.3s
+
+
+      //&:hover
 
       .proj-title
         top: -20px
+        transition: all 0.3s
 
       .proj-role
         right: -65px

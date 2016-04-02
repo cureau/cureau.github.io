@@ -13,21 +13,19 @@ $(function() {
 
         $this.css('background-image', 'url("' + prefix + imgID + bwpostfix + '")');
 
-        // preload image so there's no flicker on mouseover
-        (new Image()).src = prefix + imgID + postfix;
+         //preload image so there's no flicker on mouseover
+        //(new Image()).src = prefix + imgID + postfix;
 
-        // no good way AFAIK to set pseudoclass :hover background-image state dynamically
+         //no good way AFAIK to set pseudoclass :hover background-image state dynamically
         $this.mouseenter(function(){
             var $obj = $this;
-            $obj.css('background-image', 'url("' + prefix + imgID + postfix + '")');
-            //$this.css('background-image', 'url("' + prefix + imgID + postfix + '")');
-            //$this.css('background-image', 'url("' + prefix + imgID + postfix + '")');
-            $(".chops-details-grp").addClass('hide');
-            $(".chops-details-grp[data-details='" + imgID + "']").removeClass('hide');
+            //$obj.css('background-image', 'url("' + prefix + imgID + postfix + '")');
+            $(".chops-details-grp").removeClass('show');
+            $(".chops-details-grp[data-details='" + imgID + "']").addClass('show');
         }).mouseleave(function(){
             var $obj = $this;
-            $obj.css('background-image', 'url("' + prefix + imgID + bwpostfix + '")');
-            //$this.css('background-image', 'url("' + prefix + imgID + bwpostfix + '")');
+            //$obj.css('background-image', 'url("' + prefix + imgID + bwpostfix + '")');
+            $(".chops-details-grp[data-details='" + imgID + "']").removeClass('show');
         });
 
 
@@ -48,16 +46,17 @@ $(function() {
     //
 
     $('.chops-tldr ul li').on('mouseover', function() {
-        $(".chops-details-grp").addClass('hide');
-        $(".chops-details-grp[data-details='" + $(this).data('tldr') + "']").removeClass('hide');
+        $(".chops-details-grp");
+        $(".chops-details-grp[data-details='" + $(this).data('tldr') + "']").addClass('show');
     }).on('mouseout', function() {
         // TODO: actually just start timer
+        $(".chops-details-grp[data-details='" + $(this).data('tldr') + "']").removeClass('show');
         //$(".chops-details-grp[data-details='" + $(this).data('tldr') + "']").addClass('hide');
     });
 
     // init controller
     $(window).scroll(function() {
-        $(".chops-details-grp").addClass('hide');
+        $(".chops-details-grp").removeClass('show');
         var wScroll = $(window).scrollTop(),
             adjScroll = (wScroll + 600) * 1.25; //adjusted for right logos to show
 

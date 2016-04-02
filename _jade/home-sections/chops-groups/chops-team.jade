@@ -13,9 +13,18 @@ div.row
     div.chops-tldr
 
         ul.tldr-list
-            li(data-tldr='leadership'): <a>Leadership</a> Led 2 teams of 5 and 12 #[+monkey(1)]'s
-            li(data-tldr='camaraderie'): <a>Camaraderie</a> Well-loved by teammates.
-            li(data-tldr='communication'): <a>Communication</a> Umm&hellip;
+            li(data-tldr='leadership')
+                a(href="#", data-hover="HeaderSlip")
+                    span Leadership
+                span.tldr-desc Led 2 teams of 5 and 12 #[+monkey(1)]'s
+            li(data-tldr='camaraderie')
+                a(href="#", data-hover="AcademiaErr")
+                    span Camaraderie
+                span.tldr-desc Well-loved by teammates.
+            li(data-tldr='communication')
+                a(href="#", data-hover="ACoconutMinim")
+                    span Communication
+                span.tldr-desc Umm&hellip;
 
         div.portfolio
           +portSquare('001', 'becca', 'Whole Foods', 'BuyWell', 'Founder/CEO')
@@ -30,7 +39,7 @@ div.row
 
     div.chops-details
 
-        div.chops-details-grp(data-details='leadership').hide
+        div.chops-details-grp(data-details='leadership')
 
           +chopsBar('leadership')
 
@@ -68,7 +77,7 @@ div.row
 
 
 
-        div.chops-details-grp(data-details='camaraderie').hide
+        div.chops-details-grp(data-details='camaraderie')
 
           +chopsBar('camaraderie')
 
@@ -88,14 +97,14 @@ div.row
                   li Advise many, including YC startups & applicants.
 
 
-        div.chops-details-grp(data-details='ownership').hide
+        div.chops-details-grp(data-details='ownership')
 
           +chopsBar('ownership')
 
           div.chops-details-content
 
 
-        div.chops-details-grp(data-details='communication').hide
+        div.chops-details-grp(data-details='communication')
 
           +chopsBar('communication')
 
@@ -110,25 +119,25 @@ div.row
                   li LANGUAGES: English (native), French (conversational), Spanish (clumsy), German (learning).
 
 
-        div.chops-details-grp(data-details='gala').showcase-photo.hide
+        div.chops-details-grp(data-details='gala').showcase-photo
           +chopsBar('warehouse gala')
           div.chops-details-content
               img(src="/img/portfolio/gala275.jpeg")
               p Our BuyWell team of 12 throwing a "Warehouse Gala" for 20+ Fair Trade volunteers.
 
-        div.chops-details-grp(data-details='sxsw').showcase-photo.hide
+        div.chops-details-grp(data-details='sxsw').showcase-photo
           +chopsBar('sxsw')
           div.chops-details-content
               img(src="/img/portfolio/sxsw275.jpeg")
               p Team recharging at SXSW. Mike and I have worked together across 4 ventures: LazyAngel, ResumeConsole, Airpsych, and the dev consulting team pictured here.
 
-        div.chops-details-grp(data-details='becca').showcase-photo.hide
+        div.chops-details-grp(data-details='becca').showcase-photo
           +chopsBar('becca at wholefoods')
           div.chops-details-content
               img(src="/img/portfolio/becca275.jpeg")
               p Becca, BuyWell's Marketing Director, sizing up our placement at Whole Foods.
 
-        div.chops-details-grp(data-details='cruise').showcase-photo.hide
+        div.chops-details-grp(data-details='cruise').showcase-photo
           +chopsBar('Jam Cruise Sponsors')
           div.chops-details-content
               img(src="/img/portfolio/cruise275.jpeg")
