@@ -34,7 +34,11 @@ Temporary Items
 
 
 ### Jekyll ###
+<<<<<<< HEAD
 _site
+=======
+# _site
+>>>>>>> 6385a8266b8bb55554046c44453e11535d4d140f
 .sass-cache/
 .jekyll-metadata
 
