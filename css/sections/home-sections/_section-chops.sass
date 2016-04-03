@@ -48,7 +48,8 @@ section#chops-section
     .chops-details-grp
       ul .skill-dots, ul.show-bullets li:before, a
         color: $color1
-    .portfolio .portfolio-square:hover
+    .portfolio .portfolio-square
+      &:hover, &.focused
         color: $color1
         .proj-img:after
           background-color: $color1
@@ -80,10 +81,11 @@ section#chops-section
     .chops-details-grp
       ul .skill-dots, ul.show-bullets li:before, a
         color: $color2
-    .portfolio .portfolio-square:hover
-      color: $color2
-      .proj-img:after
-        background-color: $color2
+    .portfolio .portfolio-square
+      &:hover, &.focused
+        color: $color2
+        .proj-img:after
+          background-color: $color2
   .chops-row.tech
     color: $close-to-black
     margin-bottom: 0px
@@ -105,19 +107,20 @@ section#chops-section
     .chops-details-grp
       ul .skill-dots, ul.show-bullets li:before, a
         color: $color3
-    .portfolio .portfolio-square:hover
-      color: $color3
-      .proj-img:after
-        background-color: $color3
+    .portfolio .portfolio-square
+      &:hover, &.focused
+        color: $color3
+        .proj-img:after
+          background-color: $color3
 
   //-----//
 
 
-  .chops-row:nth-of-type(even) 
-    .chops-tldr
-      float: right
-    .chops-details
-      @include shift(0)
+  //.chops-row:nth-of-type(even) 
+    //.chops-tldr
+      //float: right
+    //.chops-details
+      //@include shift(1)
       //.chops-details-grp
         //border-left: none
         //border-right: 3px solid $color2
@@ -219,6 +222,7 @@ section#chops-section
       .chops-details
         @include span-columns(4)
         position: relative
+        @include shift(1)
         //columns: 2
         //@include shift(1)
         //padding-top: $chops-subheader-offset
@@ -232,8 +236,9 @@ section#chops-section
             content: "+ "
 
       .chops-details-grp
-        margin-top: -20px
-        padding: 20px 8px
+        margin-top: -40px
+        padding: 10px 8px 0px
+        border-left: 10px solid $close-to-black
         color: $close-to-black
         position: absolute
         opacity: 0
@@ -280,6 +285,9 @@ section#chops-section
         .chops-details-content
           padding: 0px 18px
 
+          img
+            margin-bottom: 8px
+
           ul, p
             font-family: $font-list
             font-size: 0.8em
@@ -315,7 +323,7 @@ section#chops-section
     float: left
     color: #777
 
-    &:hover
+    &:hover, &.focused
       .proj-img
         background: rgba(255,255,255,0)
         .proj-desc
