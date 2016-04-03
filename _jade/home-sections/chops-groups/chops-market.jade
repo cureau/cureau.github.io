@@ -1,0 +1,149 @@
+// CHOPS MARKET JADE
+
+include ../../mixins
+
+div.subheader
+    div.subheader-rect
+    h5 MARKET
+
+div.row
+    div.chops-tldr
+      ul.tldr-list
+          li(data-tldr='growth')
+            a(href="#", data-hover="ThrowG")
+                span Growth
+            span.tldr-desc Grew co. from $3k to $2,000,000.
+          li(data-tldr='design')
+            a(href="#", data-hover="ex dingus")
+                span UX Design
+            span.tldr-desc 12 products across 5 verticals.
+          li(data-tldr='sales')
+            a(href="#", data-hover="Seals")
+                span Sales
+            span.tldr-desc Led sales from $0 to ~$118k/m.
+
+      div.portfolio
+        +portSquare('001', 'airpsych', 'Web App', 'Airpsych', 'Founder/Dev')
+        +portSquare('001', 'buywell', 'Coffee', 'BuyWell', 'Founder/CEO')
+        +portSquare('001', 'lazyangel', 'Ad Server', 'LazyAngel Ads', 'Founder/CEO')
+        //+portSquare('001', 'saltsearch', 'Charity Concept', 'Stetly', 'Creator/Dev')
+        +portSquare('001', 'lazyangelH', 'Charity App', 'LazyAngel', 'Founder/CEO')
+
+    div.chops-details
+
+        div.chops-details-grp(data-details='design')
+
+          +chopsBar('design')
+
+          div.chops-details-content
+
+              p Co-designed a dozen products: an ad platform, a marketplace, a coffee brand, a dev tool, a charity app, and more.
+
+              //ul
+                  //li video SDK & service
+                  //li plugins & gamification layer
+                  //li wholesale & retail coffee brand
+                  //li advertising platform
+                  //li therapist marketplace
+                  //li tontine
+                  //li (helped with many others)
+
+              ul
+                +skill(3, 'Customer Interviews', '300+ customer interviews')
+                +skill(3, 'Design Sprints', 'User stories & paths, wireframes & reqs.')
+                +skill(3, 'User Stories & Paths')
+                +skill(2, 'Wireframing & Reqs')
+                +skill(2, 'Mockups (Sketch)')
+                +skill(3, 'Rapid Prototyping', "Sass, Jade, Bourbon, jQuery for speed. Vanilla HTML5, CSS3, Javascript, Bootstrap too.")
+
+
+              // 300+ customer interviews across 5 verticals: wholesale, charity, adtech, mobile, and health.
+
+        div.chops-details-grp(data-details='growth')
+
+          +chopsBar('growth')
+
+          div.chops-details-content
+
+              p Grew coffee company from $3k in saving to a multi-million dollar wholesaler employing 14 people. Got 10k users in one month for TaxInfo2008, a one-off project in college. Retained 5k monthly donors for adtech charity. Directly recruited SF's elite therapists for Airpsych marketplace.
+
+              ul
+                +skill(3, 'CAC & LTV Redesign', 'For LazyAngel, cut CAC by 5x with onboarding and social.')
+                +skill(2, 'Onboarding')
+                +skill(2, 'Conversion Optimization & Analytics')
+                +skill(3, 'DB Insights (SQL & NoSQL)')
+                +skill(2, 'Beta User Recruiting')
+
+
+        div.chops-details-grp(data-details='sales')
+
+          +chopsBar('sales')
+
+          div.chops-details-content
+
+              p We won the following accounts to pilot a charity adtech platform. (My role: co-founder, sales.)
+
+              ul.show-bullets
+                  li PacSun
+                  li Birchbox
+                  li American Family Insurance
+                  li Suubi
+
+              p We sold coffee to these accounts. (My role: CEO, directly involved in sales.)
+
+              ul.show-bullets
+                  li Whole Foods
+                  li Kroger
+                  li Costco
+                  li 50+ cafes and shops
+                  //li HEB & BJ's (not me)
+
+        div.chops-details-grp(data-details='airpsych').showcase-photo
+          +chopsBar('airpsych')
+          div.chops-details-content
+              img(src="/img/portfolio/airpsych275.jpeg")
+              p Mike and I took Airpsych from concept to marketplace in less than a month. Our app hosted SF's top 20 therapists by Week 4. (A high CAC dissuaded us from doubling down.) See: <a href="http://www.airpsych.com" target="_blank">Airpsych.com</a>.
+
+        div.chops-details-grp(data-details='buywell').showcase-photo
+          +chopsBar('buywell coffee pallet')
+          div.chops-details-content
+              img(src="/img/portfolio/buywell275.jpeg")
+              p A pallet of BuyWell Coffee. Jess and I started BuyWell with $3k in savings. Within a couple years, we were selling over $100k/m in wholesale coffee to Whole Foods, Kroger, and others.
+
+        div.chops-details-grp(data-details='lazyangelH').showcase-photo
+          +chopsBar('lazyangel charity app')
+          div.chops-details-content
+              img(src="/img/portfolio/lazyangelH275.jpeg")
+              p We onboarded thousands of donors to the LazyAngel Charity App. Users provided the funds to support the health and development for 700 Guatemalan kids. See: <a href="https://vimeo.com/30068499">LazyAngel Video</a>, <a href="http://www.lazyangel.org" target="_blank">LazyAngel.org</a>, <a href="https://www.behance.net/gallery/35414569/SaltSearch-(Concept)" target="_blank">Salt Search (concept)</a>.
+
+        div.chops-details-grp(data-details='lazyangel').showcase-photo
+          +chopsBar('LzA Ads')
+          div.chops-details-content
+              img(src="/img/portfolio/lazyangel275.jpeg")
+              p LzA Ads grew to deliver 10 million targeted, contextualized ads per month. Our advertisers included PacSun, Birchbox, and American Family Insurance. See: <a href="http://www.lazyangel.org/invite/" target="_blank">LzA Ad's Sales Video</a>.
+
+
+        //+portSquare('001', 'airpsych', 'Web App', 'Airpsych', 'Founder/Dev')
+        //+portSquare('001', 'buywell', 'Coffee', 'BuyWell', 'Founder/CEO')
+        //+portSquare('001', 'lazyangel', 'Ad Server', 'LazyAngel Ads', 'Founder/CEO')
+        //+portSquare('001', 'saltsearch', 'Charity Concept', 'Stetly', 'Creator/Dev')
+        //+portSquare('001', 'lazyangelH', 'Charity App', 'LazyAngel', 'Founder/CEO')
+// TECH
+    //+portSquare('001', 'classiccars', 'iPhone/Data', 'ClassicCars', 'Dev & Data')
+    //+portSquare('001', 'lazytown', 'iPhone App', 'LazyTown', 'Backend Dev')
+    //+portSquare('001', 'jeffgordon', '2x Apps', 'Jeff Gordon', 'Backend Dev')
+    //+portSquare('001', 'pushfriday', 'Creative Tool', 'PushFriday', 'Creator/Dev')
+    //+portSquare('001', 'lazytown', 'iPhone App', 'LazyTown', 'Backend Dev')
+    //+portSquare('001', 'mvids', 'Video Patent', 'mvids, Yeti', 'Co-Inventor')
+    //+portSquare('001', 'stetly', 'Concept', 'Stetly', 'Creator/Dev')
+    //+portSquare('001', 'mamiverse', 'iPhone App', 'Mamiverse', 'Backend Dev')
+    //+portSquare('001', 'resumeconsole', 'ATS App', 'Resume Console', 'Helper')
+
+// Market
+    //+portSquare('001', 'airpsych', 'Web App', 'Airpsych', 'Founder/Dev')
+    //+portSquare('001', 'buywell', 'Coffee', 'BuyWell', 'Founder/CEO')
+    //+portSquare('001', 'lazyangel', 'Ad Server', 'LazyAngel Ads', 'Founder/CEO')
+        //+portSquare('001', 'saltsearch', 'Charity Concept', 'Stetly', 'Creator/Dev')
+    //+portSquare('001', 'lazyangelH', 'Charity App', 'LazyAngel', 'Founder/CEO')
+
+

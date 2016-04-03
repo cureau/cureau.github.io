@@ -1,0 +1,109 @@
+.ani-before-lr
+  position: relative
+  text-decoration: none
+
+  &:before
+    content: ""
+    position: absolute
+    width: 100%
+    height: 6px
+    bottom: -2px
+    left: 0
+    background-color: yellow
+    visibility: hidden
+    +transform(scaleX(0) translateX(-50%))
+    +transition(all 250ms ease-in-out 0s)
+
+  &:hover:before
+    visibility: visible
+    +transform(scaleX(1) translateX(0%))
+
+section#cta-section
+  //background:
+    //image: url('/img/backgrounds/footer-bw.jpeg')
+    //size: 100% 100vh
+    //repeat: no-repeat
+    //position: top center
+    //attachment: fixed
+  background: $close-to-black
+  text-align: center
+  padding: 200px 0
+  height: 100vh
+  position: relative
+
+  h4#letschat.section-header
+    display: inline-block
+    position: absolute
+    text-align: left
+    top: 200px
+    transform: rotate(0deg)
+    left: 50%
+    right: auto
+    bottom: auto
+    background: none
+    line-height: 1.4em
+    border: none
+    color: $close-to-white
+    box-shadow: none
+    margin-left: -150px
+
+  #tvector-tail
+    position: absolute
+    z-index: 8
+    top: 0
+    left: 50%
+    margin: -0px 0 0 120px
+
+  #coffee-pic
+    width: 475px
+    height: 294px
+    left: 50%
+    margin-left: -650px
+    position: absolute
+    top: 200px
+    background:
+      image: url('/img/coffee.jpg')
+      repeat: no-repeat
+
+  @include keyframes(dotExpl)
+    from
+      transform: scale3d(1, 1, 1)
+
+    50%
+      transform: scale3d(1.25, 1.25, 1.25)
+
+    to
+      transform: scale3d(1, 1, 1)
+
+  #dot
+    width: 20px
+    height: 20px
+    background-color: white
+    position: absolute
+    margin-left: 177px
+    top: 258px
+    left: 50%
+    border-radius: 10px
+    @include animation(dotExpl 2s linear)
+
+
+  #email-me
+    color: yellow
+    cursor: pointer
+    @include animation(dotExpl 2s linear)
+
+    &:hover
+      //border-bottom: 5px solid yellow
+
+  #schedule-btn
+    display: inline-box
+    background: none
+    padding: 30px
+    font-size: $font-size-button
+    border: 5px solid $close-to-white
+    margin-top: 10px
+    cursor: pointer
+
+    &:hover
+      background: $close-to-white
+      color: $close-to-black

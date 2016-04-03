@@ -1,0 +1,4 @@
+name: Kyle Cureau
+markdown: redcarpet
+highlighter: rouge # or pygments or null
+exclude: ["node_modules", "gulpfile.js", "package.json"]

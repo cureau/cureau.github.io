@@ -1,0 +1,115 @@
+section#hero
+  height: 100vh
+  background-color: $close-to-black
+  background:
+    //image: url('/img/backgrounds/header-bw.jpeg')
+    size: 100% 100vh
+    repeat: no-repeat
+    position: top center
+    attachment: fixed
+
+  .nav-wrapper
+    @include row
+    @include outer-container
+    @include clearfix
+    position: relative
+    top: 16px
+    color: #ccc
+
+    #my-name
+      margin: 0
+      text-transform: uppercase
+      font-weight: normal
+      line-height: 1.2em
+      float: left
+
+    ul
+      float: right
+      padding: 0px
+      margin: 0px
+
+      .nav-rect
+        height: 1em
+        width: 4px
+        color: white
+
+      li
+        padding: 0px 18px
+        margin: 0px
+        line-height: 1.2em
+        display: inline-block
+
+        //&:nth-of-type(1) a
+          //color: $color1
+
+        //&:nth-child(2) a
+          //color: $color2
+
+        //&:nth-child(4) a
+          //color: $color3
+
+        a
+          cursor: pointer
+          display: inline-block
+          text-decoration: none
+          color: #ccc
+          text-transform: uppercase
+
+          &:hover, &.active
+            //border-bottom: 3px solid #ccc
+
+
+  #headshot
+    .photo
+      position: absolute
+      left: 50%
+      top: 95px
+      width: 1000px
+      height: 558px
+      margin-left: -280px
+      background:
+        image: url(/img/headshot.jpg)
+        repeat: no-repeat
+        position: center
+
+    h1
+      font-size: 7em
+      position: absolute
+      top: 140px
+      z-index: 5
+      font-family: $font-title
+
+
+  .down-arrow
+    width: 60px
+    height: 72px
+    position: absolute
+    left: 50%
+    margin-left: -30px
+    z-index: 10
+    bottom: -20px
+    cursor: default
+    path.a1, path.a2
+      stroke: #ccc
+      fill: transparent
+      stroke-width: 7px
+
+    path.a1
+      opacity: 0
+      animation: arrow 2s infinite
+      animation-delay: 1.5s
+
+    //&:hover
+      //path.a2
+        //display: block
+        //stroke: yellow
+
+  @keyframes arrow
+    0%
+      opacity: 0
+
+    50%
+      opacity: 0.8
+
+    100%
+      opacity: 0

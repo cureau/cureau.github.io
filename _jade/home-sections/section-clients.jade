@@ -1,0 +1,59 @@
+
+include ../mixins
+
+
+//mixin logoBox(who, img)
+  //div.logo-box: img(src='#{img}', alt='#{who}')
+
+section#clients-section
+  div.shape-tri.left#shp-clients-top
+  div.shape-slim-rect.right#shp-clients-right
+
+  div.container
+
+    div.brand-names-col
+      h4.section-header worked with
+      p
+        ul#clients-list
+          li: span airpsych
+          li: span.hl AmFam
+          li: span.hl Birchbox
+          li: span BuyWell
+          li: span ClassicCars
+          li: span.hl Costco
+          li: span.hl Counterpart
+          li: span Darrel Gwynn
+          li: span Jeff Gordon
+          li: span.hl Kroger
+          li: span LazyAngel
+          li: span LazyTown
+          li: span.hl PacSun
+          li: span PushFriday
+          li: span ResumeConsole
+          li: span.hl Sea Life
+          li: span Startal
+          li: span Stetly
+          li: span Mamiverse
+          li: span.hl Whole Foods
+          li: span Yeti Video
+
+        //div.portfolio
+            //+portSquare('001', 'airpsych', 'Web App', 'Airpsych', 'Founder/Dev')
+
+
+    div.logos-col.mat1-shadow
+      div.logos-wrapper
+
+      //+logoBox('Airpsych', '/img/logos/airpsych-black.png')
+      //+logoBox('Costco', '/img/logos/costco-black.png')
+      //+logoBox('Darrel Gwynn', '/img/logos/darrelgwynn-black.png')
+      //+logoBox('BuyWell', '/img/logos/buywell-black.png')
+      //+logoBox('American Family Insurance', '/img/logos/amfam-black.png')
+      //+logoBox('Sea Life', '/img/logos/sealife-black.png')
+      //+logoBox('Mamiverse', '/img/logos/mamiverse-black.png')
+      //+logoBox('Birchbox', '/img/logos/birchbox-black.png')
+      //+logoBox('Kroger', '/img/logos/kroger-black.png')
+      //+logoBox('Jeff Gordon', '/img/logos/jeffgordon-black.png')
+      //+logoBox('Counterpart', '/img/logos/counterpart-black.png')
+      //+logoBox('ClassicCars.com', '/img/logos/classiccars-black.png')
+      //+logoBox('PacSun', '/img/logos/pacsun-black.png')

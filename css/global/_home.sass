@@ -1,0 +1,75 @@
+
+h1, h2, h3
+  font: $font-title
+
+h4, h5
+  font-family: $font-subtitle
+
+p, h6, ul, input, button
+  font-family: $font-feature
+
+body
+  //background-color: #1b130c
+  //background-color: #0d0905
+  //background-color: #150c08
+  //background-color: $close-to-black
+
+.hide
+  display: none
+
+@mixin mat1-shadow()
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
+
+.mat1-shadow
+  //box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
+
+.container
+  @include outer-container
+
+.row
+  @include row
+  padding: 0
+
+
+
+#home-wrap
+
+  section
+    padding: 20px 0
+    position: relative
+    overflow: hidden
+
+    .section-header
+      position: absolute
+      left: 50%
+      top: 20px
+      font-family: $font-title
+      font-size: $font-size-title
+      z-index: 20
+      //display: inline-block
+      //margin: 8px
+      padding: 10px 20px
+      @include mat1-shadow()
+
+    &:nth-of-type(even)
+      background-color: $close-to-white
+      color: $close-to-black
+
+      .section-header
+        background-color: $close-to-black
+        color: $close-to-white
+        transform: rotate(-2deg)
+        margin-left: -550px
+
+    &:nth-of-type(odd)
+      color: $close-to-white
+      //background-color: $close-to-white
+      //color: $close-to-black
+
+      .section-header
+        top: 40px
+        background-color: $close-to-white
+        color: $close-to-black
+        transform: rotate(2deg)
+        margin-left: 155px

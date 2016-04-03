@@ -1,0 +1,145 @@
+// CHOPS TEAM JADE
+
+include ../../mixins
+
+
+
+div.subheader
+  div.subheader-rect
+  h5 TEAM
+
+
+div.row
+    div.chops-tldr
+
+        ul.tldr-list
+            li(data-tldr='leadership')
+                a(href="#", data-hover="HeaderSlip")
+                    span Leadership
+                span.tldr-desc Led 2 teams of 5 and 12 #[+monkey(1)]'s
+            li(data-tldr='camaraderie')
+                a(href="#", data-hover="AcademiaErr")
+                    span Camaraderie
+                span.tldr-desc Well-loved by teammates.
+            li(data-tldr='communication')
+                a(href="#", data-hover="ACoconutMinim")
+                    span Communication
+                span.tldr-desc Umm&hellip;
+
+        div.portfolio
+          +portSquare('001', 'becca', 'Whole Foods', 'BuyWell', 'Founder/CEO')
+          +portSquare('001', 'cruise', 'Jess & Rach', 'Jam Cruise', 'Sponsors')
+          +portSquare('001', 'sxsw', 'SXSW', 'Consulting', 'Full Stack')
+          +portSquare('001', 'gala', 'Warehouse Gala', 'BuyWell', 'Founder/CEO')
+
+      //
+          li <b>Communication</b> 6 speaking engagements, 20+ press interviews, web copy, 8 blog posts, and 2 marketing vids.
+          li <b>Friendliness</b> Worked with 4 colleagues on least two ventures. Mentored 2 to VIP roles.
+          li <b>Logistics</b> Setup warehouse. Roasted and shipped <span>17,000lbs of coffee per month</span>. Worked with 6 intl communities helping <span>1000s of families</span>.
+
+    div.chops-details
+
+        div.chops-details-grp(data-details='leadership')
+
+          +chopsBar('leadership')
+
+          div.chops-details-content
+
+              p Founder/Lead for LazyAngel Team of 5
+
+              - var monkey = '&#x1F435;'
+
+              ul.double-col
+                  li !{monkey + monkey} <em>founders*</em>
+                  li !{monkey} cto
+                  li !{monkey + monkey} devs
+
+              p CEO for BuyWell Team of 12
+
+              ul.double-col
+                  li !{monkey} <em>founder/ceo*</em>
+                  li !{monkey} founder/cmo
+                  li !{monkey} coo
+                  li !{monkey} coffee buyer
+                  li !{monkey} designer
+                  li !{monkey} office manager
+                  li !{monkey + monkey + monkey} sales
+                  li !{monkey + monkey + monkey} ops
+
+              p Full Stack for Consulting Team of 6
+
+              ul.double-col
+                  li !{monkey} cto
+                  li !{monkey} <em>full stack*</em>
+                  li !{monkey} designer
+                  li !{monkey + monkey} mobile devs
+                  li !{monkey} qa & customers
+
+
+
+        div.chops-details-grp(data-details='camaraderie')
+
+          +chopsBar('camaraderie')
+
+          div.chops-details-content
+
+              p My teams enjoy working with me:
+
+              ul.show-bullets
+                  li Worked with BuyWell co-founder on 2nd project, TaxInfo. We continue to co-advise.
+                  li Co-founded LazyAngel with BuyWell's Coffee Buyer. She continues to design for projs.
+                  li Recruited by LazyAngel CTO for full stack consulting & other side projs.
+
+              p I mentor & advise:
+
+              ul.show-bullets
+                  li Mentored a few throughout their careers, as they went from entry-level to VIP-level (CMO, Senior Designer...).
+                  li Advise many, including YC startups & applicants.
+
+
+        div.chops-details-grp(data-details='ownership')
+
+          +chopsBar('ownership')
+
+          div.chops-details-content
+
+
+        div.chops-details-grp(data-details='communication')
+
+          +chopsBar('communication')
+
+          div.chops-details-content
+
+              ul
+                  li PRESS: 20+ TV, radio, and print interviews.
+                  li WRITING: writing samples <a href="https://medium.com/@kylecureau/an-incomplete-treatment-of-perfectionism-5bb06e9c5a9e#.qzds53z83" target="_blank">[on perfectionism]</a> and <a href="https://medium.com/@kylecureau/choose-your-chicken-picking-your-next-startup-idea-96c30927aa11#.b9qmhrs6v" target="_blank">[on startup ideas]</a>.
+                  li WORKSHOPS: led workshop at MENSA summit (high IQ society).
+                  li VIDEO: wrote and co-produced two marketing videos: <a href="https://vimeo.com/30531547" target="_blank">[LazyAngel]</a>, <a href="https://vimeo.com/30068499" target="_blank">[LzA Ads]</a>.
+                  li WEB COPY: wrote copy for <a href="http://www.lazyangel.org" target="_blank">[LazyAngel]</a>, <a href="http://www.stetly.com" target="_blank">[Stetly]</a>, <a href="http://www.resumeconsole.com" target="_blank">[ResumeConsole]</a>.
+                  li LANGUAGES: English (native), French (conversational), Spanish (clumsy), German (learning).
+
+
+        div.chops-details-grp(data-details='gala').showcase-photo
+          +chopsBar('warehouse gala')
+          div.chops-details-content
+              img(src="/img/portfolio/gala275.jpeg")
+              p Our BuyWell team of 12 throwing a "Warehouse Gala" for 20+ Fair Trade volunteers.
+
+        div.chops-details-grp(data-details='sxsw').showcase-photo
+          +chopsBar('sxsw')
+          div.chops-details-content
+              img(src="/img/portfolio/sxsw275.jpeg")
+              p Team recharging at SXSW. Mike and I have worked together across 4 ventures: LazyAngel, ResumeConsole, Airpsych, and the dev consulting team pictured here.
+
+        div.chops-details-grp(data-details='becca').showcase-photo
+          +chopsBar('becca at wholefoods')
+          div.chops-details-content
+              img(src="/img/portfolio/becca275.jpeg")
+              p Becca, BuyWell's Marketing Director, sizing up our placement at Whole Foods.
+
+        div.chops-details-grp(data-details='cruise').showcase-photo
+          +chopsBar('Jam Cruise Sponsors')
+          div.chops-details-content
+              img(src="/img/portfolio/cruise275.jpeg")
+              p Jess and Rachel returning from a cruise we sponsored. Jess and I co-founded BuyWell and TaxInfo. I hired Rachel as our Coffee Director, and later we co-founded the charity Airpsych. She now designs for thoughtbot.
+

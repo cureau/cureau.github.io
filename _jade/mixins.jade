@@ -1,0 +1,39 @@
+mixin skill(dotsCt, item, extra)
+    - var dots = ''
+    - if (dotsCt === 0) dots += '◖'
+    - for (var x = 0; x < dotsCt; x++) dots += '●'
+        li <span class="skill-dots">#{dots} </span> #{item}
+    - if (typeof extra !== 'undefined')
+        i #{extra}
+
+//mixin portSquare(numba, imageID, projDesc, roleDesc)
+    //p whatYou
+
+mixin chopsBar(title)
+  div.chops-topbar
+      h6= title
+      div.close-x
+        svg(viewbox='0 0 40 40')
+          path(d='M 10,10 L 30,30 M 30,10 L 10,30')
+
+mixin monkey(ct)
+    - var ret = ''
+    - for (var x = 0; x < ct; x++) ret += '&#x1F435;'
+    //- for (var x = 0; x < ct; x++) ret += '&#x1F482;'
+    //- for (var y = 0; y < spaces; y++) ret += '&nbsp;'
+    //- ret += '&nbsp'
+    span(class="unicon") !{ret}
+
+mixin dancers(ct)
+    - var ret = ''
+    - for (var x = 0; x < ct; x++) ret += '&#x1F46F;'
+    - ret += '&nbsp'
+    span(class="unicon") !{ret}
+
+mixin portSquare(numba, imgID, projDesc, projCo, roleDesc)
+    div.portfolio-square
+      div.proj-img(data-imgID='#{imgID}')
+          p.proj-ct #{roleDesc}
+          p.proj-title #{projCo}
+          p.proj-desc #{projDesc}
+          //p.proj-role #{roleDesc}
