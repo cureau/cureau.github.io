@@ -48,19 +48,19 @@ $(function() {
 
         drawLine();
 
-        if (wScroll > 3227) {
+        if (wScroll > 3297) {
             $('#bw-pic').addClass('reached');
         } else {
             $('#bw-pic').removeClass('reached');
         }
 
-        if (wScroll > 3852) {
+        if (wScroll > 3932) {
             $('#lza-pic').addClass('reached');
         } else {
             $('#lza-pic').removeClass('reached');
         }
 
-        if (wScroll > 4497) {
+        if (wScroll > 4577) {
             $('#sf-pic').addClass('reached');
         } else {
             $('#sf-pic').removeClass('reached');

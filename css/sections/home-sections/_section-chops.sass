@@ -1,7 +1,6 @@
 /* Effect 10: reveal, push out
 
 
-$chops-subheader-offset: 80px
 
 section#chops-section
   padding: 0px
@@ -138,10 +137,10 @@ section#chops-section
       z-index: 10
 
       .subheader
-        margin-bottom: 10px
+        margin-bottom: 35px
         @include row
         font-size: $font-size-feature
-        height: $chops-subheader-offset
+        //font-family: $font-title
         float:left
 
         h5
@@ -162,7 +161,7 @@ section#chops-section
         @include span-columns(7)
 
         ul.tldr-list li
-          font-size: 1.7em
+          font-size: $font-size-feature-sm
           font-weight: 200
           margin-bottom: 8px
           clear: both
@@ -230,11 +229,12 @@ section#chops-section
             content: "+ "
 
       .chops-details-grp
-        margin-top: -35px
+        margin-top: -15px
         padding: 10px 8px 0px
         border-left: 10px solid $close-to-black
         color: $close-to-black
         position: absolute
+        font-family: $font-body
         opacity: 0
         +transform(translateX(-12%))
         @include transition(all 250ms ease-in-out)
@@ -249,7 +249,8 @@ section#chops-section
 
           h6
             margin: 0 0 0 7px
-            font-family: $font-list
+            font-weight: normal
+            //font-weight: 200
             text-transform: uppercase
             padding: 0
 
@@ -286,8 +287,8 @@ section#chops-section
             margin-bottom: 8px
 
           ul, p
-            font-family: $font-list
-            font-size: 0.8em
+            font-family: $font-body
+            font-size: $font-size-text
 
             li
               margin-bottom: 7px
@@ -301,16 +302,15 @@ section#chops-section
   //bottom: 35px
   //margin-left: -485px
   //@include shift(1)
-  margin: 120px 0 0 18px
+  margin: 170px 0 0 18px
   font-size: $font-size-sub
-  font-weight: 200
+  font-weight: normal
   //position: absolute
 
   .portfolio-square
     position: relative
     width: 135px
-    padding: 30px
-    margin: -30px 0px 10px 0px
+    margin: -20px 0px 10px 0px
     cursor: pointer
     height: 165px
     float: left
@@ -320,12 +320,12 @@ section#chops-section
       .proj-img
         background: rgba(255,255,255,0)
         .proj-desc
-          bottom: -40px
+          bottom: -50px
         .proj-title
-          top: -30px
+          top: -40px
         &:after
           transform: scale(1)
-          opacity: 0.7
+          opacity: 0.8
 
     p
       font-family: $font-list
@@ -346,7 +346,7 @@ section#chops-section
       display: inline-block
       //overflow:hidden
       +clearfix
-      transition: all 0.3s
+      +transition(all 350ms linear)
       &:after
         pointer-events: none
         position: absolute
@@ -369,24 +369,30 @@ section#chops-section
         text-align: center
         position: absolute
 
+      .proj-ct, .proj-desc, .proj-title, .proj-role
+        +transition(all 300ms linear)
+        color: $close-to-black
+
       .proj-ct
         left: -65px
         bottom: 35px
         transform: rotate(-90deg)
+        display: none
 
 
       .proj-desc
-        bottom: -30px
-        transition: all 0.3s
+        bottom: -40px
+        //transition: all 0.3s
 
 
       //&:hover
 
       .proj-title
-        top: -20px
-        transition: all 0.3s
+        top: -30px
+        //transition: all 0.3s
 
       .proj-role
+        display: none
         right: -65px
         bottom: 35px
         transform: rotate(-90deg)
