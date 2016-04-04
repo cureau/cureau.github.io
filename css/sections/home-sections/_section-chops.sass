@@ -3,7 +3,7 @@
 
 $chops-subheader-offset: 80px
 
-section#chops-section 
+section#chops-section
   padding: 0px
   position: relative
 
@@ -29,19 +29,12 @@ section#chops-section
   //COLORS//
   //--------
   .chops-row.market
-    //background-color: $close-to-black
-    //color: $close-to-white
-    //background:
-      //image: url('/img/backgrounds/straws-bw.jpeg')
-      //size: 100% 100vh
-      //repeat: no-repeat
-      //position: top center
-      //attachment: fixed
     .subheader-rect
       background-color: $color1
     .chops-wrapper
       border: 10px solid $close-to-black
       padding: 25px
+      overflow: hidden
     .chops-tldr
       ul.tldr-list li a::before
           background-color: $color1
@@ -128,7 +121,7 @@ section#chops-section
 
   .chops-row
     //margin: 55px
-    height: 700px
+    //height: 700px
     min-height: 600px
     padding-top: 50px
     width: 100%
@@ -138,6 +131,7 @@ section#chops-section
 
 
     .chops-wrapper
+      margin-bottom: 45px
       position: relative
       @include row
       @include outer-container
@@ -236,7 +230,7 @@ section#chops-section
             content: "+ "
 
       .chops-details-grp
-        margin-top: -40px
+        margin-top: -35px
         padding: 10px 8px 0px
         border-left: 10px solid $close-to-black
         color: $close-to-black
@@ -285,7 +279,10 @@ section#chops-section
         .chops-details-content
           padding: 0px 18px
 
-          img
+          div.port-full
+            max-width: 100%
+            width: 275px
+            height: 200px
             margin-bottom: 8px
 
           ul, p
@@ -312,14 +309,10 @@ section#chops-section
   .portfolio-square
     position: relative
     width: 135px
-    //background-color: green
     padding: 30px
-    margin: -30px 0 0 0px
-    //margin-top: -60px
+    margin: -30px 0px 10px 0px
     cursor: pointer
-    margin-bottom: 20px
     height: 165px
-    //margin: 50px 0 0 0
     float: left
     color: #777
 

@@ -15,13 +15,12 @@ $(function() {
     $('.portfolio-square .proj-img').each(function(index){
 
         var $this = $(this),
-            prefix = '/img/portfolio/',
-            postfix = '175.jpeg',
-            bwpostfix = '175-bw.jpeg';
+            bwpostfix = '175-bw';
 
         var imgID = $this.attr('data-imgID');
 
-        $this.css('background-image', 'url("' + prefix + imgID + bwpostfix + '")');
+        //$this.css('background-image', 'url("' + prefix + imgID + bwpostfix + '")');
+        $this.addClass(imgID + bwpostfix);
 
          //preload image so there's no flicker on mouseover
         //(new Image()).src = prefix + imgID + postfix;
@@ -43,8 +42,31 @@ $(function() {
 
         $('.logos-wrapper').css('background-position', 'center -' + adjScroll + 'px');
 
+        $('.down-arrow').fadeOut();
+
         //$('#timeline-section h1').css('bottom', h1Scroll + 'px');
+
         drawLine();
+
+        if (wScroll > 3227) {
+            $('#bw-pic').addClass('reached');
+        } else {
+            $('#bw-pic').removeClass('reached');
+        }
+
+        if (wScroll > 3852) {
+            $('#lza-pic').addClass('reached');
+        } else {
+            $('#lza-pic').removeClass('reached');
+        }
+
+        if (wScroll > 4497) {
+            $('#sf-pic').addClass('reached');
+        } else {
+            $('#sf-pic').removeClass('reached');
+        }
+
+
 
         var showcase = $('#showcase');
         var chops = $('#chops-section');
@@ -68,13 +90,11 @@ $(function() {
         var href = $(this).attr('href');
         var $target = $(href + '-section');
 
-
         if (typeof $target.offset() !== 'undefined') {
             $('html, body').stop().animate({
                 'scrollTop': $target.offset().top
             }, 1200, 'swing');
         }
-
     });
 
     // init the line length
