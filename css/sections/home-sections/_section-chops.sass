@@ -33,7 +33,7 @@ section#chops-section
     .chops-wrapper
       border: 10px solid $close-to-black
       padding: 25px
-      overflow: hidden
+      //overflow: hidden
     .chops-tldr
       ul.tldr-list li a::before
           background-color: $color1
@@ -160,23 +160,34 @@ section#chops-section
         height: 100%
         @include span-columns(7)
 
+        +media($stablet)
+          @include span-columns(12)
+
         ul.tldr-list li
           font-size: $font-size-feature-sm
           font-weight: 200
           margin-bottom: 8px
-          line-height: 2.2em
+          height: 2em
           clear: both
 
           .tldr-desc
              float: left
-             line-height: 2.5em
              display: block
-             padding-top: 4px
+             padding: 4px 0 14px
+
+             +media($slaptop)
+               //@include span-columns(12)
+               clear: left
+
+             +media($stablet)
+               font-size: $font-size-text
+
 
           a
             text-transform: uppercase
             color: $close-to-black
             line-height: 1em
+            float: left
             padding: 8px
             float: left
             margin: 0 8px 0px 0
@@ -223,6 +234,9 @@ section#chops-section
         //padding-top: $chops-subheader-offset
         //padding-top: 20px
 
+        +media($slaptop)
+          @include shift(0)
+
         ul
           margin-bottom: 12px
 
@@ -245,17 +259,19 @@ section#chops-section
           +transform(translateX(0%))
           opacity: 1
 
+
           +media($stablet)
-            background: white
+            margin: 0
+            border: 10px solid $close-to-black
+            z-index: 1000
             position: fixed
-            border-right: 10px solid $close-to-black
+            //height: 100%
+            width: 100%
+            background: rgba(255,255,255,0.95)
             top: 10%
             left: 0
             overflow: auto
             padding: 20px 5px
-            margin: 0
-            height: 80%
-            width: 100%
 
         .chops-topbar
           position: relative
@@ -301,6 +317,9 @@ section#chops-section
         .chops-details-content
           padding: 0px 18px
 
+          +media($slaptop)
+            width: 85%
+
           div.port-full
             max-width: 100%
             width: 275px
@@ -328,6 +347,9 @@ section#chops-section
   font-weight: normal
   //position: absolute
 
+  +media($slaptop)
+    margin-top: 120px
+
   .portfolio-square
     position: relative
     width: 135px
@@ -336,6 +358,10 @@ section#chops-section
     height: 165px
     float: left
     color: #777
+
+    &:nth-of-type(3)
+      +media($slaptop)
+        clear: left
 
     &:hover, &.focused
       .proj-img
@@ -410,6 +436,9 @@ section#chops-section
 
       .proj-title
         top: -30px
+
+        +media($slaptop)
+          display: none
         //transition: all 0.3s
 
       .proj-role

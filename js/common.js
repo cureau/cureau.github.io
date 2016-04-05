@@ -76,16 +76,20 @@ $(function() {
         var chops = $('#chops-section');
 
         var chopsDiff = chops.offset().top - wScroll;
-        if (chopsDiff <= 0 && chopsDiff >= -2100) {
-            showcase.removeClass('positioned').addClass('floating');
-            if (chopsDiff <= -1920) {
-              showcase.css('top', (1950 + chopsDiff) + 'px');
+
+        //console.log($(window).width());
+        if ($(window).width() > 1024) {
+            if (chopsDiff <= 0 && chopsDiff >= -2100) {
+                showcase.removeClass('positioned').addClass('floating');
+                if (chopsDiff <= -1920) {
+                  showcase.css('top', (1950 + chopsDiff) + 'px');
+                } else {
+                    showcase.css('top', '30px');
+                }
             } else {
+                showcase.removeClass('floating').addClass('positioned');
                 showcase.css('top', '30px');
             }
-        } else {
-            showcase.removeClass('floating').addClass('positioned');
-            showcase.css('top', '30px');
         }
     });
 
