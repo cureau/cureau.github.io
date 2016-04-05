@@ -5,6 +5,13 @@ section#timeline-section
   position: relative
   padding-top: 290px
 
+  +media($slaptop)
+    //position: absolute
+    padding: 0 0 40px 0
+
+  +media($mobile)
+    padding-bottom: 68px // to make SVG line up exactly
+
   #timeline-shape
     background-position: bottom right
 
@@ -20,6 +27,8 @@ section#timeline-section
     // to match up SVG consistently
     //height: 120px
     //max-height: 120px 
+    +media($slaptop)
+      margin-bottom: 136px
 
   .row
     height: 500px
@@ -32,6 +41,12 @@ section#timeline-section
       right: 10px
       margin: 0px
       top: -50px
+
+      +media($stablet)
+        font-size: 12em
+        top: -20px
+        right: 0px !important
+        left: auto
 
 
     @keyframes spinLeft
@@ -72,6 +87,9 @@ section#timeline-section
       width: 250px
       z-index: 10
 
+      +media($mobile)
+        display: none
+
       //margin-left: ($column + $gutter)
     &:nth-of-type(even)
       .pic
@@ -92,8 +110,22 @@ section#timeline-section
           +animation(spinLeft 800ms linear)
       .history-text
         margin-left: 112px
+        +media($slaptop)
+          margin-left: -10px
+        +media($stablet)
+          margin-left: -80px
+        +media($mobile)
+          width: 80%
+          margin: 0px auto
+          left: 0px
+          right: 0px
+          text-align: right
+
       h1
         left: 10px
+
+        +media($stablet)
+          left: auto
 
     &:last-child
       margin-bottom: 100px
@@ -107,9 +139,30 @@ section#timeline-section
       left: 50%
       //font-size: $font-size-feature-sm
 
+      +media($slaptop)
+        top: 135px
+        margin-left: -345px
+
+      +media($tablet)
+        width: 280px
+        margin-left: -250px
+
+      +media($stablet)
+        margin-left: -195px
+
+      +media($mobile)
+        width: 80%
+        margin: 0px auto
+        left: 0px
+        text-align: left
+        right: 0px
+
       h4
         text-transform: uppercase
         font-size: $font-size-feature
+
+        +media($slaptop)
+          font-size: $font-size-feature-sm
 
       h5
         font-weight: normal
@@ -117,6 +170,9 @@ section#timeline-section
       p
         font-size: $font-size-feature-sm
         font-weight: 200
+
+        +media($slaptop)
+          font-size: $font-size-feature-mob
 
     #bw-pic
       background: url('/img/timeline/bw-square.jpg')

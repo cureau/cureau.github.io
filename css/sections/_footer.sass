@@ -31,7 +31,7 @@ section#cta-section
   height: 100vh
   position: relative
 
-  h4#letschat.section-header
+  h4#letschat
     display: inline-block
     position: absolute
     text-align: left
@@ -44,8 +44,21 @@ section#cta-section
     line-height: 1.4em
     border: none
     color: $close-to-white
+    font-family: $font-title
+    font-size: $font-size-title
     box-shadow: none
     margin-left: -150px
+    z-index: 20
+    padding: 10px 20px
+
+    +media(max-width 750px)
+      left: 0px
+      top: 250px
+      font-size: $font-size-feature
+      margin-left: 20px
+
+    +media(max-width 400px)
+      font-size: $font-size-feature-sm
 
   #tvector-tail
     position: absolute
@@ -64,6 +77,9 @@ section#cta-section
     background:
       image: url('/img/coffee.jpg')
       repeat: no-repeat
+
+    +media(max-width 750px)
+      display: none
 
   @include keyframes(dotExpl)
     from

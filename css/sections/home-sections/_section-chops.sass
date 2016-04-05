@@ -7,6 +7,11 @@ section#chops-section
   position: relative
 
   #showcase
+    position: relative
+
+    +media($slaptop)
+      display: none
+
     &.floating
       position: fixed
 
@@ -145,7 +150,7 @@ section#chops-section
 
         h5
           float: left
-          margin: 0px 45px 0 12px
+          margin: 0px 0px 0 12px
 
         .subheader-rect
           height: 45px
