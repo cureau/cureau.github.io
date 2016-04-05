@@ -11,6 +11,10 @@ $(function() {
       swapChopsGroup(group);
     });
 
+    $('.close-x').on('click', function() {
+        $(".chops-details-grp").removeClass('show').css('z-index', '40');
+    });
+
     // go through and set the images for all the porfolio thumbnails
     $('.portfolio-square .proj-img').each(function(index){
 

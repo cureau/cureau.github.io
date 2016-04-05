@@ -1,3 +1,9 @@
+
+
+
+
+
+
 .ani-before
   position: relative
   text-decoration: none
@@ -20,13 +26,20 @@
 
 section#hero
   height: 100vh
+  max-height: 820px
   background-color: $close-to-black
+  overflow: hidden
   background:
     //image: url('/img/backgrounds/header-bw.jpeg')
     size: 100% 100vh
     repeat: no-repeat
     position: top center
     attachment: fixed
+
+
+  +media($slaptop)
+    height: auto
+    margin-bottom: -40px
 
   .nav-wrapper
     @include row
@@ -35,6 +48,9 @@ section#hero
     position: relative
     top: 16px
     color: #ccc
+
+    +media($slaptop)
+      display: none
 
     #my-name
       margin: 0
@@ -90,15 +106,41 @@ section#hero
       background:
         image: url(/img/headshot.jpg)
         repeat: no-repeat
-        position: center
+        position: center center
+
+      +media($slaptop)
+        //left: 0px
+        margin: 0px auto
+        left: auto
+        position: relative
+        top: -20px
+        //width: 100%
+
+      +media($tablet)
+        margin-left: -90px
+
+      +media($mobile)
+        //top: -20px
+        margin-left: -300px
+        z-index: 50
+        //left: auto
+        //height: 100%
+        //background-size: 100%
+
 
     h1
       font-size: 7em
       position: absolute
       top: 140px
-      z-index: 5
+      z-index: 55
       font-family: $font-title
 
+      +media($slaptop)
+        font-size: 5em
+        top: 90px
+
+      +media($mobile)
+        font-size: 3.5em
 
   .down-arrow
     width: 60px
@@ -119,6 +161,9 @@ section#hero
       animation: arrow 2s infinite
       animation-delay: 1.5s
 
+    //+media($mobile)
+      //display: none
+
     //&:hover
       //path.a2
         //display: block
@@ -133,3 +178,7 @@ section#hero
 
     100%
       opacity: 0
+
+
+
+

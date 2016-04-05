@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/css/main.min.css">
@@ -23,7 +23,11 @@
      <!--<script src="/bower_components/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>-->
 
      <!-- Custom JS -->
-     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+     <!--<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>-->
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+     <script>
+        window.jQuery || document.write('<script src="http://code.jquery.com/jquery-1.11.3.min.js">\x3C/script>');
+     </script>
      <script src="/js/3rdparty/jquery.pin.min.js"></script>
      <script src="/js/common.min.js"></script>
     </body>

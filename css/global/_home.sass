@@ -52,6 +52,13 @@ body
       padding: 10px 20px
       @include mat1-shadow()
 
+      +media($slaptop)
+        left: auto
+        margin-left: 0px !important
+
+      +media($mobile)
+        font-size: $font-size-feature
+
     &:nth-of-type(even)
       background-color: $close-to-white
       color: $close-to-black
@@ -73,3 +80,8 @@ body
         color: $close-to-black
         //transform: rotate(2deg)
         margin-left: 155px
+
+        //+media($tablet)
+          //left: auto
+          //margin-left: 10px
+
