@@ -26,8 +26,6 @@ section#chops-section
     height: 100%
     top: 0
 
-  .double-col
-    @include columns(2)
 
   //--------
   //COLORS//
@@ -329,15 +327,24 @@ section#chops-section
             height: 200px
             margin-bottom: 8px
 
+          a:hover
+            text-decoration: underline
+
           ul, p
             font-family: $font-body
             font-size: $font-size-text
 
             li
-              margin-bottom: 7px
+              margin-top: 7px
+
+            &.double-col
+              @include columns(2)
+
+              li
+                margin-top: 0px
 
           ul#tech-list li
-            margin-bottom: 2px
+            margin-top: 2px
 
 .portfolio
   //width: 400px
