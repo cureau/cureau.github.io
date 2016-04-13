@@ -23,8 +23,10 @@
 section#hero
   height: 100vh
   max-height: 820px
+  min-height: 710px
   background-color: $close-to-black
   overflow: hidden
+  padding: 15px
   background:
     //image: url('/img/backgrounds/header-bw.jpeg')
     size: 100% 100vh
@@ -34,8 +36,10 @@ section#hero
 
 
   +media($slaptop)
+    padding: 5px
     height: auto
     margin-bottom: -40px
+    min-height: auto
 
   .nav-wrapper
     @include row
