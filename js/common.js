@@ -39,58 +39,73 @@ $(function() {
 
     });
 
+    var sfPic = $('#sf-pic'),
+        lzaPic = $('#lza-pic'),
+        bwPic = $('#bw-pic'),
+        downArrow = $('.down-arrow');
+
+
     $(window).scroll(function() {
-        var wScroll = $(window).scrollTop(),
-            adjScroll = (wScroll + 600) * 1.25; //adjusted for right logos to show
-            //h1Scroll = wScroll/3 - 1400;
+        var wScroll = $(window).scrollTop();
+            //adjScroll1 = (wScroll + 0) * .5, //adjusted for right logos to show
+            //adjScroll2 = (wScroll + 1400) * .5, //adjusted for right logos to show
+            //adjScroll3 = (wScroll + 1000) * 1; //adjusted for right logos to show
+            ////h1Scroll = wScroll/3 - 1400;
 
-        $('.logos-wrapper').css('background-position', 'center -' + adjScroll + 'px');
+        //$('.logos-wrapper:nth-child(1)').css('background-position', 'center -' + adjScroll1 + 'px');
+        //$('.logos-wrapper:nth-child(2)').css('background-position', 'center -' + adjScroll2 + 'px');
+        //$('.logos-wrapper:nth-child(3)').css('background-position', 'center -' + adjScroll3 + 'px');
 
-        $('.down-arrow').fadeOut();
+        downArrow.fadeOut();
 
         //$('#timeline-section h1').css('bottom', h1Scroll + 'px');
 
         drawLine();
 
-        if (wScroll > 3297) {
-            $('#bw-pic').addClass('reached');
+
+        if (wScroll > 2) {
+            bwPic.addClass('reached');
         } else {
-            $('#bw-pic').removeClass('reached');
+            bwPic.removeClass('reached');
         }
 
-        if (wScroll > 3932) {
-            $('#lza-pic').addClass('reached');
+        if (wScroll > 1) {
+            lzaPic.addClass('reached');
         } else {
-            $('#lza-pic').removeClass('reached');
+            lzaPic.removeClass('reached');
         }
 
-        if (wScroll > 4577) {
-            $('#sf-pic').addClass('reached');
+        if (wScroll > 0) {
+            sfPic.addClass('reached');
         } else {
-            $('#sf-pic').removeClass('reached');
+            sfPic.removeClass('reached');
         }
 
 
 
-        var showcase = $('#showcase');
-        var chops = $('#chops-section');
+        // NOTE: THIS SECTION ANCHORS THE SHOWCASE TAG TO THE TOP
+        // BUT I'M TURNING IT OFF BECAUSE OPL GUY SAID TO AND
+        // I'M A SHEEP
+        //
+        //var showcase = $('#showcase');
+        //var chops = $('#chops-section');
 
-        var chopsDiff = chops.offset().top - wScroll;
+        //var chopsDiff = chops.offset().top - wScroll;
 
-        //console.log($(window).width());
-        if ($(window).width() > 1024) {
-            if (chopsDiff <= 0 && chopsDiff >= -2100) {
-                showcase.removeClass('positioned').addClass('floating');
-                if (chopsDiff <= -1920) {
-                  showcase.css('top', (1950 + chopsDiff) + 'px');
-                } else {
-                    showcase.css('top', '30px');
-                }
-            } else {
-                showcase.removeClass('floating').addClass('positioned');
-                showcase.css('top', '30px');
-            }
-        }
+        ////console.log($(window).width());
+        //if ($(window).width() > 1024) {
+            //if (chopsDiff <= 0 && chopsDiff >= -2100) {
+                //showcase.removeClass('positioned').addClass('floating');
+                //if (chopsDiff <= -1920) {
+                  //showcase.css('top', (1950 + chopsDiff) + 'px');
+                //} else {
+                    //showcase.css('top', '30px');
+                //}
+            //} else {
+                //showcase.removeClass('floating').addClass('positioned');
+                //showcase.css('top', '30px');
+            //}
+        //}
     });
 
     $('a[href^="#"]').on('click',function (e) {

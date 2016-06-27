@@ -22,7 +22,7 @@ section#timeline-section
     margin: -12px 0 0 -288px
 
   #timeline-header
-    margin-top: 35px
+    margin-top: 20px
     // to match up SVG consistently
     //height: 120px
     //max-height: 120px 
@@ -92,7 +92,7 @@ section#timeline-section
       //margin-left: ($column + $gutter)
     &:nth-of-type(even)
       .pic
-        +transform(scale3d(0.95, 0.95, 0.95) rotate(5deg))
+        +transform(scale3d(0.92, 0.92, 0.92) rotate(8deg))
         +transition(all 400ms linear)
         &.reached
           //opacity: 1
@@ -102,7 +102,7 @@ section#timeline-section
     &:nth-of-type(odd)
       .pic
         margin-left: -407px
-        +transform(scale3d(0.95, 0.95, 0.95) rotate(-5deg))
+        +transform(scale3d(0.92, 0.92, 0.92) rotate(-8deg))
         +transition(all 400ms linear)
         &.reached
           +transform(scale3d(1, 1, 1) rotate(0deg))

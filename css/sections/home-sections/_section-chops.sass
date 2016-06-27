@@ -7,7 +7,7 @@ section#chops-section
   position: relative
 
   #showcase
-    position: relative
+    position: absolute
 
     +media($slaptop)
       display: none
@@ -31,10 +31,11 @@ section#chops-section
   //COLORS//
   //--------
   .chops-row.market
+    background-color: white
     .subheader-rect
       background-color: $color1
     .chops-wrapper
-      border: 10px solid $close-to-black
+      border: 15px solid $close-to-black
       padding: 25px
       //overflow: hidden
     .chops-tldr
@@ -52,12 +53,13 @@ section#chops-section
     background-color: $close-to-white
     color: $close-to-black
     .chops-wrapper
-      border-top: 10px solid $close-to-black
-      border-bottom: 10px solid $close-to-black
+      border-top: 15px solid $close-to-black
+      border-bottom: 15px solid $close-to-black
       padding: 25px
     .shape-slim-rect
       background:
         image: url('/img/header.jpeg')
+        color: $accent-bg
         repeat: no-repeat
         position: top center
         attachment: fixed
@@ -82,11 +84,12 @@ section#chops-section
         .proj-img:after
           background-color: $color2
   .chops-row.tech
+    background-color: white
     color: $close-to-black
     margin-bottom: 0px
     border: none
     .chops-wrapper
-      border: 10px solid $close-to-black
+      border: 16px solid $close-to-black
       padding: 25px
     //background:
       //image: url('/img/backgrounds/cable-bw.jpg')
@@ -250,7 +253,7 @@ section#chops-section
       .chops-details-grp
         margin-top: -15px
         padding: 10px 8px 0px
-        border-left: 10px solid $close-to-black
+        border-left: 15px solid $close-to-black
         color: $close-to-black
         position: absolute
         font-family: $font-body
@@ -264,7 +267,7 @@ section#chops-section
 
           +media($stablet)
             margin: 0
-            border: 10px solid $close-to-black
+            border: 15px solid $close-to-black
             z-index: 1000
             position: fixed
             width: 100%

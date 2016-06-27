@@ -6,10 +6,10 @@
     content: ""
     position: absolute
     width: 100%
-    height: 6px
-    bottom: -2px
+    height: 15px
+    bottom: -15px
     left: 0
-    background-color: yellow
+    background-color: $close-to-white
     visibility: hidden
     +transform(scaleX(0) translateX(-50%))
     +transition(all 250ms ease-in-out 0s)
@@ -28,10 +28,25 @@ section#cta-section
   background: $close-to-black
   text-align: center
   padding: 200px 0
-  height: 100vh
+  height: calc(100vh - 70px)
   position: relative
 
+  h1
+    font-size: 21em
+    position: absolute
+    color: #343944
+    left: 10px
+    margin: 0px
+    top: 80px
+
+    +media($stablet)
+      font-size: 12em
+      top: -20px
+      right: 0px !important
+      left: auto
+
   h4#letschat
+    z-index: 100
     display: inline-block
     position: absolute
     text-align: left
@@ -47,7 +62,7 @@ section#cta-section
     font-family: $font-title
     font-size: $font-size-title
     box-shadow: none
-    margin-left: -150px
+    margin-left: -168px
     z-index: 20
     padding: 10px 20px
 
@@ -67,6 +82,14 @@ section#cta-section
     left: 50%
     margin: -0px 0 0 120px
 
+  svg#bottom-circle
+    margin-left: -590px
+    margin-top: -30px
+
+    circle
+      stroke: $close-to-white
+
+
   #coffee-pic
     width: 475px
     height: 294px
@@ -75,8 +98,9 @@ section#cta-section
     position: absolute
     top: 200px
     background:
-      image: url('/img/coffee.jpg')
+      image: url('/img/header.jpeg')
       repeat: no-repeat
+      size: 100%
 
     +media(max-width 750px)
       display: none
@@ -104,22 +128,22 @@ section#cta-section
 
 
   #email-me
-    color: yellow
+    color: $close-to-white
     cursor: pointer
     @include animation(dotExpl 2s linear)
 
     &:hover
       //border-bottom: 5px solid yellow
 
-  #schedule-btn
-    display: inline-box
-    background: none
-    padding: 30px
-    font-size: $font-size-button
-    border: 5px solid $close-to-white
-    margin-top: 10px
-    cursor: pointer
 
-    &:hover
-      background: $close-to-white
-      color: $close-to-black
+.footer
+  position: fixed
+  bottom: 0px
+  height: 70px
+  width: 100%
+  background:
+    image: url('/img/header.jpeg')
+    size: cover
+    position: bottom center
+  z-index: -1000
+

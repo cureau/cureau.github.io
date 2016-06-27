@@ -1,7 +1,7 @@
 
 
 #clients-section
-  height: 600px
+  //height: 650px
   //display: flex
   //flex-direction: column
   //justify-content: center
@@ -11,53 +11,72 @@
   .container
     position: relative
 
-  .brand-names-col
-    padding-top: 165px
-    @include span-columns(8)
+  //.brand-names-col
+    //padding-top: 165px
+    //@include span-columns(4)
+    //@include shift(4)
 
-    +media($slaptop)
-      position: relative
-      padding: 0 0 40px 0
+    //+media($slaptop)
+      //position: relative
+      //padding: 0 0 40px 0
 
-    +media($stablet)
-      @include span-columns(12)
+    //+media($stablet)
+      //@include span-columns(12)
 
-    #clients-list
-      font-family: $font-feature
-      font-weight: 200
-      font-size: $font-size-feature-sm
-      list-style-position: inside
-      list-style-type: none
-      columns: 3
+    //#clients-list
+      //font-family: $font-list
+      ////font-weight: 200
+      //font-size: $font-size-text
+      //list-style-position: inside
+      //list-style-type: none
+      //columns: 2
 
-      +media($tablet)
-        font-size: $font-size-feature-mob
+      //+media($tablet)
+        //font-size: $font-size-feature-mob
 
-      +media($mobile)
-        columns: 2
+      //+media($mobile)
+        //columns: 2
 
-      span.hl
-        //border-bottom: 3px solid #888
+      //span.hl
+        ////border-bottom: 3px solid #888
 
-      li
-        margin: 0 0 8px 3px
+      //li
+        //margin: 0 0 3px 3px
+
+  #logo-case
+    padding: 200px 0
+    width: 100%
+
+    img
+      display: block
+      margin: 0 auto
+      width: 964px
+
+
 
   .logos-col
     position: absolute
     left: 50%
-    margin: -20px 0 0 240px
+    margin: -20px 0 0 -550px
+    width: 370px
     height: 600px
-    width: 220px
-    padding: 0 30px
-    background: white
+    //border-let: 15px solid $close-to-black
+    //padding: 0 30px
+    //background: white
 
     +media($stablet)
       display: none
 
     .logos-wrapper
       height: 100%
-      width: 100%
+      width: 125px
+      opacity: 0.5
+      margin: 0px 20px
+      position: relative
+      //width: 100%
+      float: left
       background:
         image: url('/img/logo-reel.png')
         position: center 0px
         repeat: repeat-y
+        size: 100%
